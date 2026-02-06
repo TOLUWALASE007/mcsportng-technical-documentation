@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>McSportng Documentation - Introduction</title>
+    <meta name="description"
+        content="Comprehensive technical documentation for the McSportng sports management platform" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-black">
+    <header class="bg-white text-green-700 p-4 md:p-6 border-b-2 border-green-700 sticky top-0 z-50 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center">
+                <h1 class="text-xl md:text-3xl font-bold">McSportng Application Guide</h1>
+                <button id="menuToggle" class="md:hidden text-green-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav id="menu"
+                class="hidden absolute top-full left-0 w-full bg-white border-b-2 border-green-700 p-4 shadow-lg md:static md:flex md:w-auto md:border-none md:shadow-none md:p-0 md:mt-4 md:bg-transparent md:flex-row md:flex-wrap gap-3 md:gap-4">
+                <a href="index.html" class="hover:text-green-900 font-semibold py-2 md:py-0">Introduction</a>
+                <a href="auth.html" class="hover:text-green-900 py-2 md:py-0">Authentication</a>
+                <a href="org.html" class="hover:text-green-900 py-2 md:py-0">Organization</a>
+                <a href="team.html" class="hover:text-green-900 py-2 md:py-0">Team</a>
+                <a href="coach.html" class="hover:text-green-900 py-2 md:py-0">Coach</a>
+                <a href="player.html" class="hover:text-green-900 py-2 md:py-0">Player</a>
+                <a href="admin.html" class="hover:text-green-900 py-2 md:py-0">Super Admin</a>
+                <a href="public.html" class="hover:text-green-900 py-2 md:py-0">Public Pages</a>
+                <a href="sports.html" class="hover:text-green-900 py-2 md:py-0">Sport Modules</a>
+            </nav>
+        </div>
+    </header>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const menu = document.getElementById('menu');
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+            menu.classList.toggle('flex-col');
+        });
+    </script>
+
+    <main class="p-4 md:p-8 max-w-7xl mx-auto">
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-green-700">Introduction</h2>
+            <p class="mb-4 leading-relaxed">
+                McSportng is a comprehensive sports management platform designed to support organizations,
+                teams, coaches, players, agents, and administrators across multiple sports disciplines.
+                The platform provides end-to-end solutions for team management, player development,
+                statistics tracking, compliance management, and financial operations.
+            </p>
+            <p class="mb-4 leading-relaxed">
+                This technical documentation serves as a complete manual test guide and reference for
+                understanding the application's architecture, features, and workflows.
+            </p>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Supported Sports</h3>
+            <ul class="list-disc pl-6 space-y-2">
+                <li><strong>Football (Soccer)</strong> - Goals, assists, cards, formations, match events</li>
+                <li><strong>Baseball</strong> - Batting, pitching, fielding stats with inning tracking</li>
+                <li><strong>Golf</strong> - Scorecards, handicaps, tee times, kitty management</li>
+                <li><strong>Other Sports</strong> - Extensible framework for additional sports</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Target Audience</h3>
+            <ul class="list-disc pl-6 space-y-2">
+                <li><strong>QA Engineers</strong> - Manual testing procedures and test case references</li>
+                <li><strong>Developers</strong> - Technical implementation details and API endpoints</li>
+                <li><strong>Product Owners & Stakeholders</strong> - Feature overview and business logic</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Platform Overview</h3>
+            <p class="mb-4 leading-relaxed">
+                The McSportng platform is organized into role-based dashboards, each tailored to specific
+                user types and their responsibilities:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="border border-gray-300 p-4 rounded">
+                    <h4 class="font-semibold text-green-700 mb-2">Organization Admin</h4>
+                    <p class="text-sm">Manage teams, leagues, compliance, billing, and organization-wide settings</p>
+                </div>
+                <div class="border border-gray-300 p-4 rounded">
+                    <h4 class="font-semibold text-green-700 mb-2">Team Admin</h4>
+                    <p class="text-sm">Roster management, match statistics, player performance tracking</p>
+                </div>
+                <div class="border border-gray-300 p-4 rounded">
+                    <h4 class="font-semibold text-green-700 mb-2">Coach</h4>
+                    <p class="text-sm">Training schedules, lesson booking, stats verification, performance analysis</p>
+                </div>
+                <div class="border border-gray-300 p-4 rounded">
+                    <h4 class="font-semibold text-green-700 mb-2">Player/Athlete</h4>
+                    <p class="text-sm">Profile management, media uploads, career history, achievements</p>
+                </div>
+                <div class="border border-gray-300 p-4 rounded">
+                    <h4 class="font-semibold text-green-700 mb-2">Super Admin</h4>
+                    <p class="text-sm">Platform-wide control, organization onboarding, user management, financials</p>
+                </div>
+                <div class="border border-gray-300 p-4 rounded">
+                    <h4 class="font-semibold text-green-700 mb-2">Public Access</h4>
+                    <p class="text-sm">Marketing pages, public statistics, contact forms, pricing information</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Documentation Structure</h3>
+            <p class="mb-4 leading-relaxed">
+                This documentation is organized by user role and functional area. Use the navigation
+                menu above to explore specific sections:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+                <li><strong>Authentication</strong> - Login, signup, and onboarding flows</li>
+                <li><strong>Organization Dashboard</strong> - Organization-level management features</li>
+                <li><strong>Team Dashboard</strong> - Team administration and roster management</li>
+                <li><strong>Coach Dashboard</strong> - Coaching tools and player development</li>
+                <li><strong>Player Dashboard</strong> - Athlete profiles and career management</li>
+                <li><strong>Super Admin Dashboard</strong> - Platform administration and control</li>
+                <li><strong>Public Pages</strong> - Unauthenticated user experience</li>
+                <li><strong>Sport Modules</strong> - Sport-specific features and adaptations</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">How to Use This Documentation</h3>
+            <ol class="list-decimal pl-6 space-y-2">
+                <li>Navigate to the relevant section using the header menu</li>
+                <li>Review the feature descriptions and technical specifications</li>
+                <li>Follow the documented paths and workflows for testing</li>
+                <li>Verify expected behaviors and edge cases</li>
+                <li>Report any discrepancies or issues found during testing</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer class="bg-gray-100 p-6 mt-12 border-t border-gray-300">
+        <div class="max-w-7xl mx-auto text-center text-sm text-gray-600">
+            <p>McSportng Application - Technical Documentation</p>
+            <p class="mt-2">For QA Engineers, Developers, and Stakeholders</p>
+        </div>
+    </footer>
+</body>
+
+</html>

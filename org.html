@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organization Dashboard - McSportng Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-black">
+    <header class="bg-white text-green-700 p-4 md:p-6 border-b-2 border-green-700 sticky top-0 z-50 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center">
+                <h1 class="text-xl md:text-3xl font-bold">McSportng Application Guide</h1>
+                <button id="menuToggle" class="md:hidden text-green-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav id="menu"
+                class="hidden absolute top-full left-0 w-full bg-white border-b-2 border-green-700 p-4 shadow-lg md:static md:flex md:w-auto md:border-none md:shadow-none md:p-0 md:mt-4 md:bg-transparent md:flex-row md:flex-wrap gap-3 md:gap-4">
+                <a href="index.html" class="hover:text-green-900 py-2 md:py-0">Introduction</a>
+                <a href="auth.html" class="hover:text-green-900 py-2 md:py-0">Authentication</a>
+                <a href="org.html" class="hover:text-green-900 font-semibold py-2 md:py-0">Organization</a>
+                <a href="team.html" class="hover:text-green-900 py-2 md:py-0">Team</a>
+                <a href="coach.html" class="hover:text-green-900 py-2 md:py-0">Coach</a>
+                <a href="player.html" class="hover:text-green-900 py-2 md:py-0">Player</a>
+                <a href="admin.html" class="hover:text-green-900 py-2 md:py-0">Super Admin</a>
+                <a href="public.html" class="hover:text-green-900 py-2 md:py-0">Public Pages</a>
+                <a href="sports.html" class="hover:text-green-900 py-2 md:py-0">Sport Modules</a>
+            </nav>
+        </div>
+    </header>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const menu = document.getElementById('menu');
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+            menu.classList.toggle('flex-col');
+        });
+    </script>
+
+    <main class="p-4 md:p-8 max-w-7xl mx-auto">
+        <h2 class="text-2xl font-semibold mb-6 text-green-700">Organization Dashboard</h2>
+        <div class="bg-gray-50 p-4 rounded mb-6">
+            <p><strong>User Role:</strong> Organization Admin</p>
+            <p><strong>Base Path:</strong> <code class="bg-gray-200 px-2 py-1 rounded">/org</code></p>
+        </div>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Dashboard Overview</h3>
+            <p><strong>Path:</strong> /org/dashboard</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Quick stats (teams, players, events)</li>
+                <li>Recent activity logs</li>
+                <li>Quick actions and notifications</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Team Management</h3>
+            <p><strong>Path:</strong> /org/teams</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Create and manage teams</li>
+                <li>Assign team admins</li>
+                <li>View team rosters</li>
+                <li>Edit team details (name, logo, colors)</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">League Standings</h3>
+            <p><strong>Path:</strong> /org/league-standings</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View current standings</li>
+                <li>Filter by season</li>
+                <li>Export data</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Season Management</h3>
+            <p><strong>Path:</strong> /org/seasons</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Create and manage seasons</li>
+                <li>Schedule fixtures</li>
+                <li>Generate standings</li>
+                <li>Access season archives</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Stats Management</h3>
+            <p><strong>Path:</strong> /org/stats-management</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Centralized stats verification</li>
+                <li>Sport-specific stat views</li>
+                <li>Bulk approval</li>
+                <li>Dispute resolution</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Compliance</h3>
+            <p><strong>Path:</strong> /org/compliance</p>
+            <h4 class="font-semibold mt-4 mb-2">Audit Logs</h4>
+            <ul class="list-disc pl-6">
+                <li>Track administrative actions</li>
+                <li>User activity monitoring</li>
+                <li>Export logs</li>
+            </ul>
+            <h4 class="font-semibold mt-4 mb-2">Background Checks</h4>
+            <ul class="list-disc pl-6">
+                <li>Manage verification status</li>
+                <li>Upload documents</li>
+                <li>Set expiration reminders</li>
+            </ul>
+            <h4 class="font-semibold mt-4 mb-2">Documents & Waivers</h4>
+            <ul class="list-disc pl-6">
+                <li>Store policies and procedures</li>
+                <li>Track waiver signatures</li>
+                <li>Manage document versions</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Billing</h3>
+            <p><strong>Path:</strong> /org/billing</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Subscription management</li>
+                <li>Invoice viewing</li>
+                <li>Payment methods</li>
+                <li>Usage metrics and billing history</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Kitty Management (Golf Only)</h3>
+            <p><strong>Path:</strong> /org/kitty</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Create betting pools</li>
+                <li>Set buy-in amounts</li>
+                <li>Manage payouts and winners</li>
+                <li>Financial reports</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="bg-gray-100 p-6 mt-12 border-t border-gray-300">
+        <div class="max-w-7xl mx-auto text-center text-sm text-gray-600">
+            <p>McSportng Application - Technical Documentation</p>
+        </div>
+    </footer>
+</body>
+
+</html>

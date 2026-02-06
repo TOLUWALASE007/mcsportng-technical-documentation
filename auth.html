@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authentication & Onboarding - McSportng Documentation</title>
+    <meta name="description" content="Authentication and onboarding documentation for McSportng platform" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-black">
+    <header class="bg-white text-green-700 p-4 md:p-6 border-b-2 border-green-700 sticky top-0 z-50 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center">
+                <h1 class="text-xl md:text-3xl font-bold">McSportng Application Guide</h1>
+                <button id="menuToggle" class="md:hidden text-green-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav id="menu"
+                class="hidden absolute top-full left-0 w-full bg-white border-b-2 border-green-700 p-4 shadow-lg md:static md:flex md:w-auto md:border-none md:shadow-none md:p-0 md:mt-4 md:bg-transparent md:flex-row md:flex-wrap gap-3 md:gap-4">
+                <a href="index.html" class="hover:text-green-900 py-2 md:py-0">Introduction</a>
+                <a href="auth.html" class="hover:text-green-900 font-semibold py-2 md:py-0">Authentication</a>
+                <a href="org.html" class="hover:text-green-900 py-2 md:py-0">Organization</a>
+                <a href="team.html" class="hover:text-green-900 py-2 md:py-0">Team</a>
+                <a href="coach.html" class="hover:text-green-900 py-2 md:py-0">Coach</a>
+                <a href="player.html" class="hover:text-green-900 py-2 md:py-0">Player</a>
+                <a href="admin.html" class="hover:text-green-900 py-2 md:py-0">Super Admin</a>
+                <a href="public.html" class="hover:text-green-900 py-2 md:py-0">Public Pages</a>
+                <a href="sports.html" class="hover:text-green-900 py-2 md:py-0">Sport Modules</a>
+            </nav>
+        </div>
+    </header>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const menu = document.getElementById('menu');
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+            menu.classList.toggle('flex-col');
+        });
+    </script>
+
+    <main class="p-4 md:p-8 max-w-7xl mx-auto">
+        <h2 class="text-2xl font-semibold mb-6 text-green-700">Authentication & Onboarding</h2>
+
+        <section class="mb-10">
+            <h3 class="text-xl font-semibold mb-4 text-green-700">Login</h3>
+            <div class="bg-gray-50 p-4 rounded mb-4">
+                <p class="font-semibold">Path: <code class="bg-gray-200 px-2 py-1 rounded">/login</code></p>
+            </div>
+
+            <h4 class="font-semibold mb-3">Features</h4>
+            <ul class="list-disc pl-6 space-y-2 mb-4">
+                <li><strong>Email and Password Authentication</strong> - Standard credential-based login</li>
+                <li><strong>Automatic Role-Based Redirection</strong> - Users are redirected based on their assigned
+                    role</li>
+                <li><strong>Error Handling</strong> - Clear error messages for invalid credentials</li>
+                <li><strong>Password Recovery Flow</strong> - Forgot password functionality</li>
+            </ul>
+
+            <h4 class="font-semibold mb-3">Role-Based Redirection</h4>
+            <table class="w-full border-collapse border border-gray-300 mb-4">
+                <thead>
+                    <tr class="bg-gray-100">
+                        <th class="border border-gray-300 p-3 text-left">User Role</th>
+                        <th class="border border-gray-300 p-3 text-left">Redirect Path</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-300 p-3">Organization Admin</td>
+                        <td class="border border-gray-300 p-3"><code
+                                class="bg-gray-200 px-2 py-1 rounded">/org/dashboard</code></td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-3">Team Admin</td>
+                        <td class="border border-gray-300 p-3"><code
+                                class="bg-gray-200 px-2 py-1 rounded">/team/dashboard</code></td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-3">Coach</td>
+                        <td class="border border-gray-300 p-3"><code
+                                class="bg-gray-200 px-2 py-1 rounded">/coach/dashboard</code></td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-3">Player/Athlete</td>
+                        <td class="border border-gray-300 p-3"><code
+                                class="bg-gray-200 px-2 py-1 rounded">/player/profile</code></td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-3">Super Admin</td>
+                        <td class="border border-gray-300 p-3"><code
+                                class="bg-gray-200 px-2 py-1 rounded">/super-admin/organizations</code></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="font-semibold mb-3">Test Cases</h4>
+            <div class="space-y-4">
+                <div class="border border-gray-300 p-4 rounded">
+                    <p class="font-semibold mb-2">TC-AUTH-001: Valid Login</p>
+                    <p class="text-sm mb-2"><strong>Steps:</strong></p>
+                    <ol class="list-decimal pl-6 text-sm space-y-1 mb-2">
+                        <li>Navigate to /login</li>
+                        <li>Enter valid email and password</li>
+                        <li>Click "Login" button</li>
+                    </ol>
+                    <p class="text-sm"><strong>Expected Result:</strong> User is redirected to role-appropriate
+                        dashboard</p>
+                </div>
+
+                <div class="border border-gray-300 p-4 rounded">
+                    <p class="font-semibold mb-2">TC-AUTH-002: Invalid Credentials</p>
+                    <p class="text-sm mb-2"><strong>Steps:</strong></p>
+                    <ol class="list-decimal pl-6 text-sm space-y-1 mb-2">
+                        <li>Navigate to /login</li>
+                        <li>Enter invalid email or password</li>
+                        <li>Click "Login" button</li>
+                    </ol>
+                    <p class="text-sm"><strong>Expected Result:</strong> Error message displayed, user remains on login
+                        page</p>
+                </div>
+
+                <div class="border border-gray-300 p-4 rounded">
+                    <p class="font-semibold mb-2">TC-AUTH-003: Forgot Password</p>
+                    <p class="text-sm mb-2"><strong>Steps:</strong></p>
+                    <ol class="list-decimal pl-6 text-sm space-y-1 mb-2">
+                        <li>Navigate to /login</li>
+                        <li>Click "Forgot Password" link</li>
+                        <li>Enter registered email</li>
+                        <li>Submit request</li>
+                    </ol>
+                    <p class="text-sm"><strong>Expected Result:</strong> Password reset email sent, confirmation message
+                        displayed</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-10">
+            <h3 class="text-xl font-semibold mb-4 text-green-700">Sign Up</h3>
+            <div class="bg-gray-50 p-4 rounded mb-4">
+                <p class="font-semibold">Path: <code class="bg-gray-200 px-2 py-1 rounded">/signup</code></p>
+            </div>
+
+            <h4 class="font-semibold mb-3">Features</h4>
+            <ul class="list-disc pl-6 space-y-2 mb-4">
+                <li><strong>Multi-Step Registration</strong> - Progressive form with role-based fields</li>
+                <li><strong>Role Selection</strong> - User selects their role during registration</li>
+                <li><strong>Password Strength Validation</strong> - Real-time password strength indicator</li>
+                <li><strong>Email Validation</strong> - Format and uniqueness validation</li>
+                <li><strong>Redirect on Success</strong> - Automatic redirect to onboarding or dashboard</li>
+            </ul>
+
+            <h4 class="font-semibold mb-3">Registration Steps</h4>
+            <div class="space-y-3 mb-4">
+                <div class="border-l-4 border-green-700 pl-4">
+                    <p class="font-semibold">Step 1: Basic Information</p>
+                    <p class="text-sm">Email, password, confirm password, full name</p>
+                </div>
+                <div class="border-l-4 border-green-700 pl-4">
+                    <p class="font-semibold">Step 2: Role Selection</p>
+                    <p class="text-sm">Choose user role: Organization Admin, Team Admin, Coach, Player, Agent</p>
+                </div>
+                <div class="border-l-4 border-green-700 pl-4">
+                    <p class="font-semibold">Step 3: Role-Specific Information</p>
+                    <p class="text-sm">Additional fields based on selected role (organization name, team affiliation,
+                        etc.)</p>
+                </div>
+                <div class="border-l-4 border-green-700 pl-4">
+                    <p class="font-semibold">Step 4: Terms and Confirmation</p>
+                    <p class="text-sm">Accept terms of service, privacy policy, complete registration</p>
+                </div>
+            </div>
+
+            <h4 class="font-semibold mb-3">Validation Rules</h4>
+            <table class="w-full border-collapse border border-gray-300 mb-4">
+                <thead>
+                    <tr class="bg-gray-100">
+                        <th class="border border-gray-300 p-3 text-left">Field</th>
+                        <th class="border border-gray-300 p-3 text-left">Validation Rule</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-300 p-3">Email</td>
+                        <td class="border border-gray-300 p-3">Valid email format, unique in system</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-3">Password</td>
+                        <td class="border border-gray-300 p-3">Minimum 8 characters, 1 uppercase, 1 lowercase, 1 number,
+                            1 special character</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-3">Confirm Password</td>
+                        <td class="border border-gray-300 p-3">Must match password field</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-3">Full Name</td>
+                        <td class="border border-gray-300 p-3">Minimum 2 characters, letters and spaces only</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="font-semibold mb-3">Test Cases</h4>
+            <div class="space-y-4">
+                <div class="border border-gray-300 p-4 rounded">
+                    <p class="font-semibold mb-2">TC-SIGNUP-001: Successful Registration</p>
+                    <p class="text-sm mb-2"><strong>Steps:</strong></p>
+                    <ol class="list-decimal pl-6 text-sm space-y-1 mb-2">
+                        <li>Navigate to /signup</li>
+                        <li>Complete all registration steps with valid data</li>
+                        <li>Accept terms and conditions</li>
+                        <li>Submit registration</li>
+                    </ol>
+                    <p class="text-sm"><strong>Expected Result:</strong> Account created, user redirected to onboarding
+                        or dashboard</p>
+                </div>
+
+                <div class="border border-gray-300 p-4 rounded">
+                    <p class="font-semibold mb-2">TC-SIGNUP-002: Weak Password Rejection</p>
+                    <p class="text-sm mb-2"><strong>Steps:</strong></p>
+                    <ol class="list-decimal pl-6 text-sm space-y-1 mb-2">
+                        <li>Navigate to /signup</li>
+                        <li>Enter password that doesn't meet strength requirements</li>
+                        <li>Attempt to proceed</li>
+                    </ol>
+                    <p class="text-sm"><strong>Expected Result:</strong> Error message displayed, user cannot proceed
+                    </p>
+                </div>
+
+                <div class="border border-gray-300 p-4 rounded">
+                    <p class="font-semibold mb-2">TC-SIGNUP-003: Duplicate Email</p>
+                    <p class="text-sm mb-2"><strong>Steps:</strong></p>
+                    <ol class="list-decimal pl-6 text-sm space-y-1 mb-2">
+                        <li>Navigate to /signup</li>
+                        <li>Enter email that already exists in system</li>
+                        <li>Complete registration form</li>
+                        <li>Submit registration</li>
+                    </ol>
+                    <p class="text-sm"><strong>Expected Result:</strong> Error message indicating email already
+                        registered</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-10">
+            <h3 class="text-xl font-semibold mb-4 text-green-700">Onboarding Flow</h3>
+            <p class="mb-4">After successful registration, users are guided through a role-specific onboarding process:
+            </p>
+
+            <div class="space-y-3">
+                <div class="border border-gray-300 p-4 rounded">
+                    <p class="font-semibold mb-2">Organization Admin Onboarding</p>
+                    <ul class="list-disc pl-6 text-sm space-y-1">
+                        <li>Complete organization profile</li>
+                        <li>Set up billing information</li>
+                        <li>Create first team (optional)</li>
+                        <li>Invite team admins (optional)</li>
+                    </ul>
+                </div>
+
+                <div class="border border-gray-300 p-4 rounded">
+                    <p class="font-semibold mb-2">Team Admin Onboarding</p>
+                    <ul class="list-disc pl-6 text-sm space-y-1">
+                        <li>Complete team profile</li>
+                        <li>Add team logo and colors</li>
+                        <li>Invite players and coaches</li>
+                    </ul>
+                </div>
+
+                <div class="border border-gray-300 p-4 rounded">
+                    <p class="font-semibold mb-2">Coach Onboarding</p>
+                    <ul class="list-disc pl-6 text-sm space-y-1">
+                        <li>Complete coaching profile</li>
+                        <li>Set certifications and qualifications</li>
+                        <li>Set availability for lessons</li>
+                    </ul>
+                </div>
+
+                <div class="border border-gray-300 p-4 rounded">
+                    <p class="font-semibold mb-2">Player Onboarding</p>
+                    <ul class="list-disc pl-6 text-sm space-y-1">
+                        <li>Complete athlete profile</li>
+                        <li>Add physical stats and position</li>
+                        <li>Upload profile photo</li>
+                        <li>Add career highlights (optional)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-100 p-6 mt-12 border-t border-gray-300">
+        <div class="max-w-7xl mx-auto text-center text-sm text-gray-600">
+            <p>McSportng Application - Technical Documentation</p>
+            <p class="mt-2">For QA Engineers, Developers, and Stakeholders</p>
+        </div>
+    </footer>
+</body>
+
+</html>

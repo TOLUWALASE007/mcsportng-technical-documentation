@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Admin Dashboard - McSportng Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-black">
+    <header class="bg-white text-green-700 p-4 md:p-6 border-b-2 border-green-700 sticky top-0 z-50 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center">
+                <h1 class="text-xl md:text-3xl font-bold">McSportng Application Guide</h1>
+                <button id="menuToggle" class="md:hidden text-green-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav id="menu"
+                class="hidden absolute top-full left-0 w-full bg-white border-b-2 border-green-700 p-4 shadow-lg md:static md:flex md:w-auto md:border-none md:shadow-none md:p-0 md:mt-4 md:bg-transparent md:flex-row md:flex-wrap gap-3 md:gap-4">
+                <a href="index.html" class="hover:text-green-900 py-2 md:py-0">Introduction</a>
+                <a href="auth.html" class="hover:text-green-900 py-2 md:py-0">Authentication</a>
+                <a href="org.html" class="hover:text-green-900 py-2 md:py-0">Organization</a>
+                <a href="team.html" class="hover:text-green-900 py-2 md:py-0">Team</a>
+                <a href="coach.html" class="hover:text-green-900 py-2 md:py-0">Coach</a>
+                <a href="player.html" class="hover:text-green-900 py-2 md:py-0">Player</a>
+                <a href="admin.html" class="hover:text-green-900 font-semibold py-2 md:py-0">Super Admin</a>
+                <a href="public.html" class="hover:text-green-900 py-2 md:py-0">Public Pages</a>
+                <a href="sports.html" class="hover:text-green-900 py-2 md:py-0">Sport Modules</a>
+            </nav>
+        </div>
+    </header>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const menu = document.getElementById('menu');
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+            menu.classList.toggle('flex-col');
+        });
+    </script>
+
+    <main class="p-4 md:p-8 max-w-7xl mx-auto">
+        <h2 class="text-2xl font-semibold mb-6 text-green-700">Super Admin Dashboard</h2>
+        <div class="bg-gray-50 p-4 rounded mb-6">
+            <p><strong>User Role:</strong> Super Admin</p>
+            <p><strong>Base Path:</strong> <code class="bg-gray-200 px-2 py-1 rounded">/super-admin</code></p>
+        </div>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Organization Management</h3>
+            <p><strong>Path:</strong> /super-admin/organizations</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View all organizations</li>
+                <li>Onboard new organizations</li>
+                <li>Suspend or activate organizations</li>
+                <li>Edit organization details</li>
+                <li>View organization usage metrics</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Club Management</h3>
+            <p><strong>Path:</strong> /super-admin/clubs</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View all clubs across organizations</li>
+                <li>Manage club approvals</li>
+                <li>Monitor club activity</li>
+                <li>Resolve club disputes</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">User Management</h3>
+            <p><strong>Path:</strong> /super-admin/users</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View all platform users</li>
+                <li>Manage user roles and permissions</li>
+                <li>Impersonate users for support</li>
+                <li>Suspend or ban users</li>
+                <li>Reset user passwords</li>
+                <li>View user activity logs</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Financial Management</h3>
+            <p><strong>Path:</strong> /super-admin/financial</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Platform revenue tracking</li>
+                <li>Subscription analytics</li>
+                <li>Payment processing overview</li>
+                <li>Refund management</li>
+                <li>Financial reports and exports</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Platform Settings</h3>
+            <p><strong>Path:</strong> /super-admin/settings</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Configure global platform settings</li>
+                <li>Manage feature flags</li>
+                <li>Set pricing tiers</li>
+                <li>Configure email templates</li>
+                <li>Manage API integrations</li>
+                <li>System maintenance mode</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Key Capabilities</h3>
+            <div class="space-y-4">
+                <div class="border border-gray-300 p-4 rounded">
+                    <h4 class="font-semibold text-green-700 mb-2">Organization Onboarding</h4>
+                    <p class="text-sm">Complete workflow for adding new organizations to the platform, including
+                        verification and setup</p>
+                </div>
+                <div class="border border-gray-300 p-4 rounded">
+                    <h4 class="font-semibold text-green-700 mb-2">User Impersonation</h4>
+                    <p class="text-sm">Ability to log in as any user for support and troubleshooting purposes</p>
+                </div>
+                <div class="border border-gray-300 p-4 rounded">
+                    <h4 class="font-semibold text-green-700 mb-2">Suspension & Activation</h4>
+                    <p class="text-sm">Control organization and user access to the platform</p>
+                </div>
+                <div class="border border-gray-300 p-4 rounded">
+                    <h4 class="font-semibold text-green-700 mb-2">Global Role Management</h4>
+                    <p class="text-sm">Assign and modify user roles across all organizations</p>
+                </div>
+                <div class="border border-gray-300 p-4 rounded">
+                    <h4 class="font-semibold text-green-700 mb-2">Platform Revenue Tracking</h4>
+                    <p class="text-sm">Comprehensive financial analytics and reporting</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-100 p-6 mt-12 border-t border-gray-300">
+        <div class="max-w-7xl mx-auto text-center text-sm text-gray-600">
+            <p>McSportng Application - Technical Documentation</p>
+        </div>
+    </footer>
+</body>
+
+</html>

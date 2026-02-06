@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Public Pages - McSportng Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-black">
+    <header class="bg-white text-green-700 p-4 md:p-6 border-b-2 border-green-700 sticky top-0 z-50 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center">
+                <h1 class="text-xl md:text-3xl font-bold">McSportng Application Guide</h1>
+                <button id="menuToggle" class="md:hidden text-green-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav id="menu"
+                class="hidden absolute top-full left-0 w-full bg-white border-b-2 border-green-700 p-4 shadow-lg md:static md:flex md:w-auto md:border-none md:shadow-none md:p-0 md:mt-4 md:bg-transparent md:flex-row md:flex-wrap gap-3 md:gap-4">
+                <a href="index.html" class="hover:text-green-900 py-2 md:py-0">Introduction</a>
+                <a href="auth.html" class="hover:text-green-900 py-2 md:py-0">Authentication</a>
+                <a href="org.html" class="hover:text-green-900 py-2 md:py-0">Organization</a>
+                <a href="team.html" class="hover:text-green-900 py-2 md:py-0">Team</a>
+                <a href="coach.html" class="hover:text-green-900 py-2 md:py-0">Coach</a>
+                <a href="player.html" class="hover:text-green-900 py-2 md:py-0">Player</a>
+                <a href="admin.html" class="hover:text-green-900 py-2 md:py-0">Super Admin</a>
+                <a href="public.html" class="hover:text-green-900 font-semibold py-2 md:py-0">Public Pages</a>
+                <a href="sports.html" class="hover:text-green-900 py-2 md:py-0">Sport Modules</a>
+            </nav>
+        </div>
+    </header>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const menu = document.getElementById('menu');
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+            menu.classList.toggle('flex-col');
+        });
+    </script>
+
+    <main class="p-4 md:p-8 max-w-7xl mx-auto">
+        <h2 class="text-2xl font-semibold mb-6 text-green-700">Public Pages</h2>
+        <div class="bg-gray-50 p-4 rounded mb-6">
+            <p><strong>Access:</strong> No authentication required</p>
+            <p><strong>Purpose:</strong> Marketing, information, and public data access</p>
+        </div>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Landing Page</h3>
+            <p><strong>Path:</strong> /</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Hero section with value proposition</li>
+                <li>Feature highlights</li>
+                <li>Call-to-action buttons (Sign Up, Login)</li>
+                <li>Testimonials and social proof</li>
+                <li>Footer with links</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">About Page</h3>
+            <p><strong>Path:</strong> /about</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Company mission and vision</li>
+                <li>Team information</li>
+                <li>Platform history</li>
+                <li>Supported sports overview</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Pricing Page</h3>
+            <p><strong>Path:</strong> /pricing</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Subscription tier comparison</li>
+                <li>Feature breakdown by tier</li>
+                <li>Pricing calculator</li>
+                <li>FAQ section</li>
+                <li>Contact sales option</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Contact Page</h3>
+            <p><strong>Path:</strong> /contact</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Contact form (name, email, message)</li>
+                <li>Support email and phone</li>
+                <li>Office locations</li>
+                <li>Social media links</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Features Page</h3>
+            <p><strong>Path:</strong> /features</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Detailed feature descriptions</li>
+                <li>Screenshots and demos</li>
+                <li>Use case examples</li>
+                <li>Integration capabilities</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Public Stats</h3>
+            <p><strong>Path:</strong> /stats-public</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>League standings (public leagues only)</li>
+                <li>Player leaderboards</li>
+                <li>Recent match results</li>
+                <li>Upcoming fixtures</li>
+                <li>Filter by sport and season</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="bg-gray-100 p-6 mt-12 border-t border-gray-300">
+        <div class="max-w-7xl mx-auto text-center text-sm text-gray-600">
+            <p>McSportng Application - Technical Documentation</p>
+        </div>
+    </footer>
+</body>
+
+</html>

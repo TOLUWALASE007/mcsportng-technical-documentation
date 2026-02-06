@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sport-Specific Modules - McSportng Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-black">
+    <header class="bg-white text-green-700 p-4 md:p-6 border-b-2 border-green-700 sticky top-0 z-50 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center">
+                <h1 class="text-xl md:text-3xl font-bold">McSportng Application Guide</h1>
+                <button id="menuToggle" class="md:hidden text-green-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav id="menu"
+                class="hidden absolute top-full left-0 w-full bg-white border-b-2 border-green-700 p-4 shadow-lg md:static md:flex md:w-auto md:border-none md:shadow-none md:p-0 md:mt-4 md:bg-transparent md:flex-row md:flex-wrap gap-3 md:gap-4">
+                <a href="index.html" class="hover:text-green-900 py-2 md:py-0">Introduction</a>
+                <a href="auth.html" class="hover:text-green-900 py-2 md:py-0">Authentication</a>
+                <a href="org.html" class="hover:text-green-900 py-2 md:py-0">Organization</a>
+                <a href="team.html" class="hover:text-green-900 py-2 md:py-0">Team</a>
+                <a href="coach.html" class="hover:text-green-900 py-2 md:py-0">Coach</a>
+                <a href="player.html" class="hover:text-green-900 py-2 md:py-0">Player</a>
+                <a href="admin.html" class="hover:text-green-900 py-2 md:py-0">Super Admin</a>
+                <a href="public.html" class="hover:text-green-900 py-2 md:py-0">Public Pages</a>
+                <a href="sports.html" class="hover:text-green-900 font-semibold py-2 md:py-0">Sport Modules</a>
+            </nav>
+        </div>
+    </header>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const menu = document.getElementById('menu');
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+            menu.classList.toggle('flex-col');
+        });
+    </script>
+
+    <main class="p-4 md:p-8 max-w-7xl mx-auto">
+        <h2 class="text-2xl font-semibold mb-6 text-green-700">Sport-Specific Modules</h2>
+        <p class="mb-6">McSportng adapts its interface and features based on the selected sport, providing tailored
+            statistics tracking and management tools.</p>
+
+        <section class="mb-10">
+            <h3 class="text-xl font-semibold mb-4 text-green-700">Football (Soccer)</h3>
+
+            <h4 class="font-semibold mb-3">Player Statistics</h4>
+            <ul class="list-disc pl-6 mb-4">
+                <li>Goals scored</li>
+                <li>Assists</li>
+                <li>Yellow and red cards</li>
+                <li>Minutes played</li>
+                <li>Shots on target</li>
+                <li>Pass completion rate</li>
+                <li>Tackles and interceptions</li>
+            </ul>
+
+            <h4 class="font-semibold mb-3">Match Features</h4>
+            <ul class="list-disc pl-6 mb-4">
+                <li>Match event timeline (goals, substitutions, cards)</li>
+                <li>Formation builder (4-4-2, 4-3-3, etc.)</li>
+                <li>Starting XI and substitutes</li>
+                <li>Match result and score</li>
+                <li>Possession statistics</li>
+            </ul>
+
+            <h4 class="font-semibold mb-3">Team Management</h4>
+            <ul class="list-disc pl-6 mb-4">
+                <li>Position assignments (GK, DEF, MID, FWD)</li>
+                <li>Jersey number management</li>
+                <li>Captain and vice-captain designation</li>
+            </ul>
+        </section>
+
+        <section class="mb-10">
+            <h3 class="text-xl font-semibold mb-4 text-green-700">Baseball</h3>
+
+            <h4 class="font-semibold mb-3">Batting Statistics</h4>
+            <ul class="list-disc pl-6 mb-4">
+                <li>At-bats (AB)</li>
+                <li>Hits (H)</li>
+                <li>Home runs (HR)</li>
+                <li>Runs batted in (RBI)</li>
+                <li>Batting average (AVG)</li>
+                <li>On-base percentage (OBP)</li>
+                <li>Slugging percentage (SLG)</li>
+            </ul>
+
+            <h4 class="font-semibold mb-3">Pitching Statistics</h4>
+            <ul class="list-disc pl-6 mb-4">
+                <li>Innings pitched (IP)</li>
+                <li>Earned run average (ERA)</li>
+                <li>Strikeouts (K)</li>
+                <li>Walks (BB)</li>
+                <li>Wins and losses</li>
+                <li>Saves</li>
+                <li>WHIP (Walks + Hits per Inning Pitched)</li>
+            </ul>
+
+            <h4 class="font-semibold mb-3">Fielding Statistics</h4>
+            <ul class="list-disc pl-6 mb-4">
+                <li>Putouts (PO)</li>
+                <li>Assists (A)</li>
+                <li>Errors (E)</li>
+                <li>Fielding percentage</li>
+                <li>Double plays</li>
+            </ul>
+
+            <h4 class="font-semibold mb-3">Game Features</h4>
+            <ul class="list-disc pl-6 mb-4">
+                <li>Inning-by-inning tracking</li>
+                <li>Lineup and batting order</li>
+                <li>Pitch count monitoring</li>
+                <li>Box score generation</li>
+            </ul>
+        </section>
+
+        <section class="mb-10">
+            <h3 class="text-xl font-semibold mb-4 text-green-700">Golf</h3>
+
+            <h4 class="font-semibold mb-3">Player Statistics</h4>
+            <ul class="list-disc pl-6 mb-4">
+                <li>Handicap index</li>
+                <li>Average score</li>
+                <li>Fairways hit percentage</li>
+                <li>Greens in regulation (GIR)</li>
+                <li>Putts per round</li>
+                <li>Driving distance</li>
+                <li>Sand save percentage</li>
+            </ul>
+
+            <h4 class="font-semibold mb-3">Scorecard Management</h4>
+            <ul class="list-disc pl-6 mb-4">
+                <li>Hole-by-hole scoring</li>
+                <li>Par tracking</li>
+                <li>Stroke recording</li>
+                <li>Course handicap calculation</li>
+                <li>Net and gross scores</li>
+            </ul>
+
+            <h4 class="font-semibold mb-3">Tee Time Booking</h4>
+            <ul class="list-disc pl-6 mb-4">
+                <li>Schedule tee times</li>
+                <li>Group formation (2-4 players)</li>
+                <li>Course selection</li>
+                <li>Booking confirmation and reminders</li>
+            </ul>
+
+            <h4 class="font-semibold mb-3">Kitty System</h4>
+            <ul class="list-disc pl-6 mb-4">
+                <li>Create betting pools for tournaments</li>
+                <li>Set buy-in amounts</li>
+                <li>Configure payout structure (1st, 2nd, 3rd)</li>
+                <li>Automatic winner calculation</li>
+                <li>Payout tracking and distribution</li>
+                <li>Kitty balance management</li>
+            </ul>
+
+            <h4 class="font-semibold mb-3">Club Structure</h4>
+            <ul class="list-disc pl-6 mb-4">
+                <li>Golf clubs (not teams)</li>
+                <li>Member management</li>
+                <li>Tournament organization</li>
+                <li>Club championships</li>
+            </ul>
+        </section>
+
+        <section class="mb-10">
+            <h3 class="text-xl font-semibold mb-4 text-green-700">Adaptive Behavior</h3>
+            <p class="mb-4">The platform automatically adapts based on the selected sport:</p>
+
+            <table class="w-full border-collapse border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-100">
+                        <th class="border border-gray-300 p-3 text-left">Feature</th>
+                        <th class="border border-gray-300 p-3 text-left">Football</th>
+                        <th class="border border-gray-300 p-3 text-left">Baseball</th>
+                        <th class="border border-gray-300 p-3 text-left">Golf</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-300 p-3">Organization Unit</td>
+                        <td class="border border-gray-300 p-3">Teams</td>
+                        <td class="border border-gray-300 p-3">Teams</td>
+                        <td class="border border-gray-300 p-3">Clubs</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-3">Match/Event Type</td>
+                        <td class="border border-gray-300 p-3">Matches</td>
+                        <td class="border border-gray-300 p-3">Games</td>
+                        <td class="border border-gray-300 p-3">Rounds/Tournaments</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-3">Scoring System</td>
+                        <td class="border border-gray-300 p-3">Goals</td>
+                        <td class="border border-gray-300 p-3">Runs</td>
+                        <td class="border border-gray-300 p-3">Strokes</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-3">Positions</td>
+                        <td class="border border-gray-300 p-3">GK, DEF, MID, FWD</td>
+                        <td class="border border-gray-300 p-3">Pitcher, Catcher, Infield, Outfield</td>
+                        <td class="border border-gray-300 p-3">N/A</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-3">Betting/Kitty</td>
+                        <td class="border border-gray-300 p-3">Not available</td>
+                        <td class="border border-gray-300 p-3">Not available</td>
+                        <td class="border border-gray-300 p-3">Available</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="bg-gray-100 p-6 mt-12 border-t border-gray-300">
+        <div class="max-w-7xl mx-auto text-center text-sm text-gray-600">
+            <p>McSportng Application - Technical Documentation</p>
+        </div>
+    </footer>
+</body>
+
+</html>
