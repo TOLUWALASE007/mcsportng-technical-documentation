@@ -9,29 +9,30 @@
 </head>
 
 <body class="bg-white text-black">
-    <header class="bg-white text-green-700 p-4 md:p-6 border-b-2 border-green-700 sticky top-0 z-50 relative">
+    <header class="bg-white text-green-700 p-4 md:p-6 border-b-2 border-green-700 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto">
             <div class="flex justify-between items-center">
-                <h1 class="text-xl md:text-3xl font-bold">McSportng Application Guide</h1>
+                <a href="index.html">
+                    <img src="assets/logo/mcsportng-l1.svg" alt="McSportng" class="h-8 md:h-12">
+                </a>
                 <button id="menuToggle" class="md:hidden text-green-700 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
+                <nav id="menu"
+                    class="hidden md:flex md:flex-row md:flex-wrap gap-3 md:gap-4 absolute md:static top-full left-0 w-full md:w-auto bg-white md:bg-transparent border-b-2 md:border-none border-green-700 p-4 md:p-0 shadow-lg md:shadow-none">
+                    <a href="auth.html" class="hover:text-green-900 py-2 md:py-0">Authentication</a>
+                    <a href="org.html" class="hover:text-green-900 font-semibold py-2 md:py-0">Organization</a>
+                    <a href="team.html" class="hover:text-green-900 py-2 md:py-0">Team</a>
+                    <a href="coach.html" class="hover:text-green-900 py-2 md:py-0">Coach</a>
+                    <a href="player.html" class="hover:text-green-900 py-2 md:py-0">Player</a>
+                    <a href="admin.html" class="hover:text-green-900 py-2 md:py-0">Super Admin</a>
+                    <a href="public.html" class="hover:text-green-900 py-2 md:py-0">Public Pages</a>
+                    <a href="sports.html" class="hover:text-green-900 py-2 md:py-0">Sport Modules</a>
+                </nav>
             </div>
-            <nav id="menu"
-                class="hidden absolute top-full left-0 w-full bg-white border-b-2 border-green-700 p-4 shadow-lg md:static md:flex md:w-auto md:border-none md:shadow-none md:p-0 md:mt-4 md:bg-transparent md:flex-row md:flex-wrap gap-3 md:gap-4">
-                <a href="index.html" class="hover:text-green-900 py-2 md:py-0">Introduction</a>
-                <a href="auth.html" class="hover:text-green-900 py-2 md:py-0">Authentication</a>
-                <a href="org.html" class="hover:text-green-900 font-semibold py-2 md:py-0">Organization</a>
-                <a href="team.html" class="hover:text-green-900 py-2 md:py-0">Team</a>
-                <a href="coach.html" class="hover:text-green-900 py-2 md:py-0">Coach</a>
-                <a href="player.html" class="hover:text-green-900 py-2 md:py-0">Player</a>
-                <a href="admin.html" class="hover:text-green-900 py-2 md:py-0">Super Admin</a>
-                <a href="public.html" class="hover:text-green-900 py-2 md:py-0">Public Pages</a>
-                <a href="sports.html" class="hover:text-green-900 py-2 md:py-0">Sport Modules</a>
-            </nav>
         </div>
     </header>
     <script>
@@ -59,6 +60,11 @@
                 <li>Recent activity logs</li>
                 <li>Quick actions and notifications</li>
             </ul>
+            <div class="mt-6">
+                <img src="assets/org/org_dashboard.png" alt="Organization Dashboard"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Dashboard</p>
+            </div>
         </section>
 
         <section class="mb-8">
@@ -70,6 +76,11 @@
                 <li>View team rosters</li>
                 <li>Edit team details (name, logo, colors)</li>
             </ul>
+            <div class="mt-6">
+                <img src="assets/org/org_teams.png" alt="Organization Teams"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Teams</p>
+            </div>
         </section>
 
         <section class="mb-8">
@@ -80,6 +91,11 @@
                 <li>Filter by season</li>
                 <li>Export data</li>
             </ul>
+            <div class="mt-6">
+                <img src="assets/org/org_league_standings.png" alt="Organization League Standings"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization League Standings</p>
+            </div>
         </section>
 
         <section class="mb-8">
@@ -91,6 +107,77 @@
                 <li>Generate standings</li>
                 <li>Access season archives</li>
             </ul>
+            <div class="mt-6">
+                <img src="assets/org/org_seasons.png" alt="Organization Seasons"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Seasons</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Coaches Management</h3>
+            <p><strong>Path:</strong> /org/coaches</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View and manage all organization coaches</li>
+                <li>Assign coaches to teams and seasons</li>
+                <li>Manage roles and permissions</li>
+                <li>Activate or deactivate coach accounts</li>
+            </ul>
+            <div class="mt-6">
+                <img src="assets/org/org_coaches.png" alt="Organization Coaches"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Coaches Management</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Players Management</h3>
+            <p><strong>Path:</strong> /org/players</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View all registered players</li>
+                <li>Assign players to teams</li>
+                <li>Manage eligibility and status</li>
+                <li>View player history and movement</li>
+            </ul>
+            <div class="mt-6">
+                <img src="assets/org/org_players.png" alt="Organization Players"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Players Management</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Transfers</h3>
+            <p><strong>Path:</strong> /org/transfers</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Initiate and approve player transfers</li>
+                <li>Track transfer history</li>
+                <li>Manage transfer windows</li>
+                <li>Audit transfer approvals</li>
+            </ul>
+            <div class="mt-6">
+                <img src="assets/org/org_transfers.png" alt="Organization Transfers"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Transfers</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Contracts</h3>
+            <p><strong>Path:</strong> /org/contracts</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Create and manage player and coach contracts</li>
+                <li>Track contract duration and expiry</li>
+                <li>Store signed documents</li>
+            </ul>
+            <div class="mt-6">
+                <img src="assets/org/org_contracts.png" alt="Organization Contracts"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Contracts Management</p>
+            </div>
         </section>
 
         <section class="mb-8">
@@ -102,40 +189,125 @@
                 <li>Bulk approval</li>
                 <li>Dispute resolution</li>
             </ul>
+            <div class="mt-6">
+                <img src="assets/org/org_league_stats.png" alt="Organization Stats Management"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Stats Management</p>
+            </div>
         </section>
 
         <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Compliance</h3>
-            <p><strong>Path:</strong> /org/compliance</p>
-            <h4 class="font-semibold mt-4 mb-2">Audit Logs</h4>
-            <ul class="list-disc pl-6">
-                <li>Track administrative actions</li>
-                <li>User activity monitoring</li>
-                <li>Export logs</li>
-            </ul>
-            <h4 class="font-semibold mt-4 mb-2">Background Checks</h4>
-            <ul class="list-disc pl-6">
-                <li>Manage verification status</li>
-                <li>Upload documents</li>
-                <li>Set expiration reminders</li>
-            </ul>
-            <h4 class="font-semibold mt-4 mb-2">Documents & Waivers</h4>
-            <ul class="list-disc pl-6">
-                <li>Store policies and procedures</li>
-                <li>Track waiver signatures</li>
-                <li>Manage document versions</li>
-            </ul>
         </section>
 
         <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Billing</h3>
-            <p><strong>Path:</strong> /org/billing</p>
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Calendar & Scheduling</h3>
+            <p><strong>Path:</strong> /org/calendar</p>
             <ul class="list-disc pl-6 mt-3">
-                <li>Subscription management</li>
-                <li>Invoice viewing</li>
-                <li>Payment methods</li>
-                <li>Usage metrics and billing history</li>
+                <li>Organization-wide event calendar</li>
+                <li>Matches, training, and meetings</li>
+                <li>Conflict detection</li>
+                <li>Calendar sharing</li>
             </ul>
+            <div class="mt-6">
+                <img src="assets/org/org_calendar.png" alt="Organization Calendar"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Calendar</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Venues</h3>
+            <p><strong>Path:</strong> /org/venues</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Manage stadiums and facilities</li>
+                <li>Assign venues to events</li>
+                <li>Track availability</li>
+                <li>Store venue details and capacity</li>
+            </ul>
+            <div class="mt-6">
+                <img src="assets/org/org_venues.png" alt="Organization Venues"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Venues</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Communications</h3>
+            <p><strong>Path:</strong> /org/communications</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Send messages to teams and users</li>
+                <li>Email and in-app notifications</li>
+                <li>Audience targeting</li>
+            </ul>
+            <div class="mt-6">
+                <img src="assets/org/org_communications.png" alt="Organization Communications"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Communications</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Communication Templates</h3>
+            <p><strong>Path:</strong> /org/communications/templates</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Create reusable message templates</li>
+                <li>Email and notification formatting</li>
+            </ul>
+            <div class="mt-6">
+                <img src="assets/org/org_communications_templates.png" alt="Organization Communication Templates"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Communication Templates</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Analytics</h3>
+            <p><strong>Path:</strong> /org/analytics</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Performance analytics dashboards</li>
+                <li>Participation and growth metrics</li>
+                <li>Exportable reports</li>
+            </ul>
+            <div class="mt-6">
+                <img src="assets/org/org_analytics.png" alt="Organization Analytics"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Analytics</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Billing Payments</h3>
+            <p><strong>Path:</strong> /org/billing/payments</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View payment history</li>
+                <li>Manage payment methods</li>
+                <li>Retry failed payments</li>
+            </ul>
+            <div class="mt-6">
+                <img src="assets/org/org_payments.png" alt="Organization Payments"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Payments</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Billing Invoices</h3>
+            <p><strong>Path:</strong> /org/billing/invoices</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View generated invoices</li>
+                <li>Download invoice PDFs</li>
+                <li>Invoice status tracking</li>
+            </ul>
+            <div class="mt-6">
+                <img src="assets/org/org_invoices.png" alt="Organization Invoices"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Invoices</p>
+            </div>
         </section>
 
         <section class="mb-8">
@@ -147,6 +319,11 @@
                 <li>Manage payouts and winners</li>
                 <li>Financial reports</li>
             </ul>
+            <div class="mt-6">
+                <img src="assets/org/org_kitty.png" alt="Organization Kitty"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Kitty Management</p>
+            </div>
         </section>
     </main>
 
