@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Super Admin Dashboard - McSportng Documentation</title>
+    <title>Super Admin Portal - McSportng Documentation</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -47,71 +47,189 @@
     </script>
 
     <main class="p-4 md:p-8 max-w-7xl mx-auto">
-        <h2 class="text-2xl font-semibold mb-6 text-green-700">Super Admin Dashboard</h2>
+        <h2 class="text-2xl font-semibold mb-6 text-green-700">Super Admin Portal</h2>
         <div class="bg-gray-50 p-4 rounded mb-6">
             <p><strong>User Role:</strong> Super Admin</p>
             <p><strong>Base Path:</strong> <code class="bg-gray-200 px-2 py-1 rounded">/super-admin</code></p>
         </div>
 
         <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Organization Management</h3>
-            <p><strong>Path:</strong> /super-admin/organizations</p>
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Super Admin Dashboard</h3>
+            <p><strong>Path:</strong> /super-admin/dashboard</p>
             <ul class="list-disc pl-6 mt-3">
-                <li>View all organizations</li>
-                <li>Onboard new organizations</li>
-                <li>Suspend or activate organizations</li>
-                <li>Edit organization details</li>
-                <li>View organization usage metrics</li>
+                <li>User, organization, and financial summaries</li>
+                <li>Quick access to critical admin actions</li>
             </ul>
-        </section>
-
-        <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Club Management</h3>
-            <p><strong>Path:</strong> /super-admin/clubs</p>
-            <ul class="list-disc pl-6 mt-3">
-                <li>View all clubs across organizations</li>
-                <li>Manage club approvals</li>
-                <li>Monitor club activity</li>
-                <li>Resolve club disputes</li>
-            </ul>
+            <div class="mt-6">
+                <img src="assets/super-admin/super_admin_dashboard.png" alt="Super Admin Dashboard"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Super Admin Dashboard</p>
+            </div>
         </section>
 
         <section class="mb-8">
             <h3 class="text-xl font-semibold mb-3 text-green-700">User Management</h3>
             <p><strong>Path:</strong> /super-admin/users</p>
             <ul class="list-disc pl-6 mt-3">
-                <li>View all platform users</li>
-                <li>Manage user roles and permissions</li>
-                <li>Impersonate users for support</li>
-                <li>Suspend or ban users</li>
-                <li>Reset user passwords</li>
-                <li>View user activity logs</li>
+                <li>View and manage all platform users</li>
+                <li>Assign roles and permissions</li>
+                <li>Activate, suspend, or delete accounts</li>
             </ul>
+            <div class="mt-6">
+                <img src="assets/super-admin/super_admin_users.png" alt="User Management"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">User Management</p>
+            </div>
         </section>
 
         <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Financial Management</h3>
-            <p><strong>Path:</strong> /super-admin/financial</p>
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Organizations</h3>
+            <p><strong>Path:</strong> /super-admin/organizations</p>
             <ul class="list-disc pl-6 mt-3">
-                <li>Platform revenue tracking</li>
-                <li>Subscription analytics</li>
-                <li>Payment processing overview</li>
-                <li>Refund management</li>
-                <li>Financial reports and exports</li>
+                <li>Manage registered organizations</li>
+                <li>Approve, suspend, or deactivate organizations</li>
+                <li>View organization-level analytics</li>
             </ul>
+            <div class="mt-6">
+                <img src="assets/super-admin/super_admin_organizations.png" alt="Organizations"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Management</p>
+            </div>
         </section>
 
         <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Platform Settings</h3>
-            <p><strong>Path:</strong> /super-admin/settings</p>
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Clubs</h3>
+            <p><strong>Path:</strong> /super-admin/clubs</p>
             <ul class="list-disc pl-6 mt-3">
-                <li>Configure global platform settings</li>
-                <li>Manage feature flags</li>
-                <li>Set pricing tiers</li>
-                <li>Configure email templates</li>
-                <li>Manage API integrations</li>
-                <li>System maintenance mode</li>
+                <li>View and manage all clubs</li>
+                <li>Link clubs to organizations</li>
+                <li>Monitor club activity and compliance</li>
             </ul>
+            <div class="mt-6">
+                <img src="assets/super-admin/super_admin_clubs.png" alt="Clubs"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Club Management</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Teams</h3>
+            <p><strong>Path:</strong> /super-admin/teams</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Manage all teams across clubs</li>
+                <li>View team composition and assignments</li>
+                <li>Monitor performance and participation</li>
+            </ul>
+            <div class="mt-6">
+                <img src="assets/super-admin/super_admin_teams.png" alt="Teams"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Team Management</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Agents</h3>
+            <p><strong>Path:</strong> /super-admin/agents</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View and manage registered agents</li>
+                <li>Verify agent credentials</li>
+                <li>Monitor agent activity and compliance</li>
+            </ul>
+            <div class="mt-6">
+                <img src="assets/super-admin/super_admin_agents.png" alt="Agents"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Agent Management</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Coaches</h3>
+            <p><strong>Path:</strong> /super-admin/coaches</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Manage coach accounts</li>
+                <li>Assign coaches to teams</li>
+                <li>Track coaching activity</li>
+            </ul>
+            <div class="mt-6">
+                <img src="assets/super-admin/super_admin_coaches.png" alt="Coaches"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Coach Management</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Players</h3>
+            <p><strong>Path:</strong> /super-admin/players</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View all players on the platform</li>
+                <li>Manage player status and eligibility</li>
+                <li>Monitor player activity</li>
+            </ul>
+            <div class="mt-6">
+                <img src="assets/super-admin/super_admin_players.png" alt="Players"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Management</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Financial Invoices</h3>
+            <p><strong>Path:</strong> /super-admin/financial/invoices</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View all generated invoices</li>
+                <li>Track payment status</li>
+                <li>Export financial records</li>
+            </ul>
+            <div class="mt-6">
+                <img src="assets/super-admin/super_admin_invoices.png" alt="Invoices"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Invoice Management</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Subscriptions</h3>
+            <p><strong>Path:</strong> /super-admin/financial/subscriptions</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Manage platform subscription plans</li>
+                <li>Track active and expired subscriptions</li>
+                <li>Revenue insights</li>
+            </ul>
+            <div class="mt-6">
+                <img src="assets/super-admin/super_admin_subscriptions.png" alt="Subscriptions"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Subscription Management</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Communications</h3>
+            <p><strong>Path:</strong> /super-admin/communications</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Platform-wide announcements</li>
+                <li>Targeted communications by role</li>
+                <li>Communication logs</li>
+            </ul>
+            <div class="mt-6">
+                <img src="assets/super-admin/super_admin_communications.png" alt="Communications"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Super Admin Communications</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Communication Templates</h3>
+            <p><strong>Path:</strong> /communications/templates</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Create and manage message templates</li>
+                <li>Reuse templates across announcements</li>
+                <li>Standardize platform messaging</li>
+            </ul>
+            <div class="mt-6">
+                <img src="assets/super-admin/super_admin_templates.png" alt="Communication Templates"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Communication Templates</p>
+            </div>
         </section>
 
         <section class="mb-8">
