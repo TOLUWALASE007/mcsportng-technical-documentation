@@ -27,6 +27,7 @@
                     <a href="org.html" class="hover:text-green-900 py-2 md:py-0">Organization</a>
                     <a href="team.html" class="hover:text-green-900 py-2 md:py-0">Team</a>
                     <a href="coach.html" class="hover:text-green-900 font-semibold py-2 md:py-0">Coach</a>
+                    <a href="agent.html" class="hover:text-green-900 py-2 md:py-0">Agent</a>
                     <a href="player.html" class="hover:text-green-900 py-2 md:py-0">Player</a>
                     <a href="admin.html" class="hover:text-green-900 py-2 md:py-0">Super Admin</a>
                     <a href="public.html" class="hover:text-green-900 py-2 md:py-0">Public Pages</a>
@@ -53,50 +54,88 @@
         </div>
 
         <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">The Dressing Room</h3>
+            <p><strong>Path:</strong> /coach/dashboard</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Central coach overview for the assigned team</li>
+                <li>Quick access to players, performance, and schedules</li>
+                <li>Recent announcements and updates</li>
+                <li>Upcoming matches and training sessions</li>
+            </ul>
+            <div class="mt-6">
+                <img src="assets/coach/coach_dashboard.png" alt="Coach Dashboard"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Coach Dashboard (The Dressing Room)</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Players</h3>
+            <p><strong>Path:</strong> /coach/players</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View players assigned to the coach’s team</li>
+                <li>Access individual player profiles</li>
+                <li>Review player availability and status</li>
+                <li>Monitor development and participation</li>
+            </ul>
+            <div class="mt-6">
+                <img src="assets/coach/coach_players.png" alt="Coach Players"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Coach Players Management</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Team Performance</h3>
+            <p><strong>Path:</strong> /coach/league-performance</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View team performance across leagues and seasons</li>
+                <li>Analyze match results and trends</li>
+                <li>Compare performance over time</li>
+                <li>Identify strengths and improvement areas</li>
+            </ul>
+            <div class="mt-6">
+                <img src="assets/coach/coach_team_performance.png" alt="Team Performance"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Team Performance Overview</p>
+            </div>
+        </section>
+
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Announcements</h3>
+            <p><strong>Path:</strong> /coach/announcements</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Create announcements for players and teams</li>
+                <li>Publish time-sensitive updates</li>
+                <li>View announcement history</li>
+                <li>Control visibility and audience</li>
+            </ul>
+            <div class="mt-6">
+                <img src="assets/coach/coach_announcements.png" alt="Coach Announcements"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Coach Announcements</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
             <h3 class="text-xl font-semibold mb-3 text-green-700">Training Schedule</h3>
             <p><strong>Path:</strong> /coach/training-schedule</p>
             <ul class="list-disc pl-6 mt-3">
-                <li>Create training sessions</li>
-                <li>Set date, time, and location</li>
-                <li>Assign players to sessions</li>
-                <li>Track attendance</li>
-                <li>Add training notes and objectives</li>
+                <li>Create and manage training sessions</li>
+                <li>Schedule drills, workouts, and practices</li>
+                <li>Assign sessions to players or groups</li>
+                <li>View attendance and session history</li>
             </ul>
+            <div class="mt-6">
+                <img src="assets/coach/training_schedule.png" alt="Training Schedule"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Training Schedule</p>
+            </div>
         </section>
 
-        <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Lesson Booking</h3>
-            <p><strong>Path:</strong> /coach/lesson-booking</p>
-            <ul class="list-disc pl-6 mt-3">
-                <li>Set availability for private lessons</li>
-                <li>View booking requests</li>
-                <li>Approve or decline lesson bookings</li>
-                <li>Manage lesson pricing</li>
-                <li>Track completed lessons</li>
-            </ul>
-        </section>
-
-        <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Stats Verification</h3>
-            <p><strong>Path:</strong> /coach/stats-verification</p>
-            <ul class="list-disc pl-6 mt-3">
-                <li>Review player statistics</li>
-                <li>Verify accuracy of submitted stats</li>
-                <li>Add coaching notes to player performance</li>
-                <li>Flag discrepancies for review</li>
-            </ul>
-        </section>
-
-        <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">League Performance</h3>
-            <p><strong>Path:</strong> /coach/league-performance</p>
-            <ul class="list-disc pl-6 mt-3">
-                <li>View team standings</li>
-                <li>Analyze player performance trends</li>
-                <li>Compare stats across seasons</li>
-                <li>Export performance reports</li>
-            </ul>
-        </section>
     </main>
 
     <footer class="bg-gray-100 p-6 mt-12 border-t border-gray-300">
