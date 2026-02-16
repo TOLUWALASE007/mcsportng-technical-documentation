@@ -1,40 +1,65 @@
-# McSportng Application Guide
+# McSportng Documentation
 
-This repository contains the technical documentation website for the McSportng sports management platform. It is designed to provide comprehensive guides for QA engineers, developers, and stakeholders.
+This repository contains the technical documentation website for the McSportng sports management platform. It serves as a comprehensive guide for QA engineers, developers, and stakeholders, detailing the features and user roles across different sports portals.
 
 ## Features
 
-- Fully responsive design for mobile and desktop integration
-- Sticky navigation header for easy access
-- Mobile-friendly hamburger menu with overlay
-- Comprehensive documentation across multiple user roles (Admin, Coach, Player, etc.)
+- **Responsive Design**: Fully responsive layout optimized for mobile and desktop devices.
+- **Sticky Navigation**: Headers remain accessible while scrolling for easy navigation.
+- **Mobile Menu**: Includes a hamburger menu with an overlay for mobile users.
+- **Role-Based Documentation**: Detailed guides for distinct user roles (Admin, Coach, Player, etc.) tailored to each sport.
 
-## Technologies
+## Technologies Used
 
-- HTML5
-- Tailwind CSS (via CDN)
-- Vanilla JavaScript (for navigation logic)
-
-## How to Run
-
-Since this project uses static HTML files with a CDN for styling, no build process or package installation is required.
-
-1. Clone or download the repository.
-2. Navigate to the project directory.
-3. Open `index.html` in any modern web browser to start viewing the documentation.
+- **HTML5**: Semantic structure for documentation pages.
+- **Tailwind CSS**: Utility-first CSS framework for styling (via CDN).
+- **Vanilla JavaScript**: Lightweight scripts for interactive elements like mobile navigation.
 
 ## Project Structure
 
-- `index.html`: Introduction and platform overview
-- `auth.html`: User authentication and onboarding workflows
-- `org.html`: Organization level management description
-- `team.html`: Team administration reference
-- `coach.html`: Features for coaches and trainers
-- `player.html`: Player dashboard and profile management
-- `admin.html`: Super Admin controls
-- `public.html`: Public-facing pages
-- `sports.html`: Sport-specific module details
+The project is organized into a root directory containing general documentation and specific portals for different sports.
+
+### Root Directory
+
+- `index.html`: Main landing page and platform overview.
+- `admin.html`: Documentation for Super Admin controls and system management.
+- `auth.html`: User authentication, registration, and onboarding workflows.
+- `public.html`: Details on public-facing pages and accessible content.
+- `sports.html`: Overview of sport-specific modules and features.
+
+### Sport Portals
+
+Each sport has a dedicated portal with documentation tailored to its unique requirements.
+
+#### Baseball Portal (`/baseball_portal`)
+- `index.html`: Overview of the Baseball portal.
+- `coach.html`: Features and tools for baseball coaches.
+- `player.html`: Dashboard and profile management for baseball players.
+- `org.html`: Organization-level management for baseball leagues.
+- `team.html`: Team administration and roster management.
+
+#### Football Portal (`/football_portal`)
+- `index.html`: Overview of the Football portal.
+- `agent.html`: Features for sports agents managing players.
+- `coach.html`: Tools for football coaches, including strategy and training.
+- `player.html`: Player profile, stats, and career management.
+- `org.html`: Administrative tools for football organizations.
+- `team.html`: Team management and squad coordination.
+
+#### Golf Portal (`/golf_portal`)
+- `index.html`: Overview of the Golf portal.
+- `coach.html`: Coaching tools for golf instructors.
+- `player.html`: Golfer profile, handicap tracking, and tournament history.
+- `org.html`: Management features for golf clubs and organizations.
+
+## How to Run locally
+
+Since this project relies on static HTML files and a CDN for styling, no build process or package installation is required.
+
+1.  Clone or download the repository.
+2.  Navigate to the project directory.
+3.  Open `index.html` (in the root or any portal folder) in a modern web browser to view the documentation.
 
 ## Customization
 
-The design uses Tailwind CSS utility classes. To modify the styling, edit the classes directly in the HTML files. The navigation logic is contained within the script tags in each file.
+The interface is styled using Tailwind CSS utility classes. To modify the design, simply edit the class attributes directly within the HTML files. Navigation logic is embedded in script tags within each file.

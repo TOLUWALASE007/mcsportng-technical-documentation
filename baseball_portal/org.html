@@ -9,42 +9,56 @@
 </head>
 
 <body class="bg-white text-black">
-    <header class="bg-white text-green-700 p-4 md:p-6 border-b-2 border-green-700 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex justify-between items-center">
-                <a href="index.html">
-                    <img src="assets/logo/mcsportng-l1.svg" alt="McSportng" class="h-8 md:h-12">
+    <!-- NAVBAR -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="../baseball_portal/index.html" class="flex items-center">
+                    <img src="../assets/logo/mcsportng-l1.svg" alt="McSportng Logo" class="h-10 w-auto">
                 </a>
-                <button id="menuToggle" class="md:hidden text-green-700 focus:outline-none">
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="coach.html" class="hover:text-green-600">Coach</a>
+                    <a href="player.html" class="hover:text-green-600">Player</a>
+                    <a href="team.html" class="hover:text-green-600">Team</a>
+                    <a href="org.html" class="hover:text-green-600">Organization</a>
+                </nav>
+
+                <!-- Mobile Navigation -->
+                <button class="md:hidden" id="mobile-menu-button">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
+                            d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
-                <nav id="menu"
-                    class="hidden md:flex md:flex-row md:flex-wrap gap-3 md:gap-4 absolute md:static top-full left-0 w-full md:w-auto bg-white md:bg-transparent border-b-2 md:border-none border-green-700 p-4 md:p-0 shadow-lg md:shadow-none">
-                    <a href="auth.html" class="hover:text-green-900 py-2 md:py-0">Authentication</a>
-                    <a href="org.html" class="hover:text-green-900 font-semibold py-2 md:py-0">Organization</a>
-                    <a href="team.html" class="hover:text-green-900 py-2 md:py-0">Team</a>
-                    <a href="coach.html" class="hover:text-green-900 py-2 md:py-0">Coach</a>
-                    <a href="agent.html" class="hover:text-green-900 py-2 md:py-0">Agent</a>
-                    <a href="player.html" class="hover:text-green-900 py-2 md:py-0">Player</a>
-                    <a href="admin.html" class="hover:text-green-900 py-2 md:py-0">Super Admin</a>
-                    <a href="public.html" class="hover:text-green-900 py-2 md:py-0">Public Pages</a>
-                    <a href="sports.html" class="hover:text-green-900 py-2 md:py-0">Sport Modules</a>
-                </nav>
             </div>
         </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-2 space-y-1">
+                <a href="coach.html" class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Coach</a>
+                <a href="player.html" class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Player</a>
+                <a href="team.html" class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Team</a>
+                <a href="org.html"
+                    class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Organization</a>
+            </div>
+        </div>
+
+
+        <script>
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Refactor: Add absolute positioning to overlay content instead of pushing it down
+            mobileMenu.classList.add('absolute', 'left-0', 'right-0', 'top-full', 'shadow-lg', 'z-50');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
     </header>
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const menu = document.getElementById('menu');
-        menuToggle.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            menu.classList.toggle('flex');
-            menu.classList.toggle('flex-col');
-        });
-    </script>
 
     <main class="p-4 md:p-8 max-w-7xl mx-auto">
         <h2 class="text-2xl font-semibold mb-6 text-green-700">Organization Portal</h2>
@@ -62,7 +76,7 @@
                 <li>Quick actions and notifications</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/org/org_dashboard.png" alt="Organization Dashboard"
+                <img src="../assets/org/org_dashboard.png" alt="Organization Dashboard"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Organization Dashboard</p>
             </div>
@@ -78,7 +92,7 @@
                 <li>Edit team details (name, logo, colors)</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/org/org_teams.png" alt="Organization Teams"
+                <img src="../assets/org/org_teams.png" alt="Organization Teams"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Organization Teams</p>
             </div>
@@ -93,7 +107,7 @@
                 <li>Export data</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/org/org_league_standings.png" alt="Organization League Standings"
+                <img src="../assets/org/org_league_standings.png" alt="Organization League Standings"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Organization League Standings</p>
             </div>
@@ -109,7 +123,7 @@
                 <li>Access season archives</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/org/org_seasons.png" alt="Organization Seasons"
+                <img src="../assets/org/org_seasons.png" alt="Organization Seasons"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Organization Seasons</p>
             </div>
@@ -125,7 +139,7 @@
                 <li>Activate or deactivate coach accounts</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/org/org_coaches.png" alt="Organization Coaches"
+                <img src="../assets/org/org_coaches.png" alt="Organization Coaches"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Organization Coaches Management</p>
             </div>
@@ -142,7 +156,7 @@
                 <li>View player history and movement</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/org/org_players.png" alt="Organization Players"
+                <img src="../assets/org/org_players.png" alt="Organization Players"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Organization Players Management</p>
             </div>
@@ -159,7 +173,7 @@
                 <li>Audit transfer approvals</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/org/org_transfers.png" alt="Organization Transfers"
+                <img src="../assets/org/org_transfers.png" alt="Organization Transfers"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Organization Transfers</p>
             </div>
@@ -175,7 +189,7 @@
                 <li>Store signed documents</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/org/org_contracts.png" alt="Organization Contracts"
+                <img src="../assets/org/org_contracts.png" alt="Organization Contracts"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Organization Contracts Management</p>
             </div>
@@ -191,7 +205,7 @@
                 <li>Dispute resolution</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/org/org_league_stats.png" alt="Organization Stats Management"
+                <img src="../assets/org/org_league_stats.png" alt="Organization Stats Management"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Organization Stats Management</p>
             </div>
@@ -210,7 +224,7 @@
                 <li>Calendar sharing</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/org/org_calendar.png" alt="Organization Calendar"
+                <img src="../assets/org/org_calendar.png" alt="Organization Calendar"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Organization Calendar</p>
             </div>
@@ -227,7 +241,7 @@
                 <li>Store venue details and capacity</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/org/org_venues.png" alt="Organization Venues"
+                <img src="../assets/org/org_venues.png" alt="Organization Venues"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Organization Venues</p>
             </div>
@@ -243,7 +257,7 @@
                 <li>Audience targeting</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/org/org_communications.png" alt="Organization Communications"
+                <img src="../assets/org/org_communications.png" alt="Organization Communications"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Organization Communications</p>
             </div>
@@ -258,7 +272,7 @@
                 <li>Email and notification formatting</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/org/org_communications_templates.png" alt="Organization Communication Templates"
+                <img src="../assets/org/org_communications_templates.png" alt="Organization Communication Templates"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Organization Communication Templates</p>
             </div>
@@ -273,7 +287,7 @@
                 <li>Exportable reports</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/org/org_analytics.png" alt="Organization Analytics"
+                <img src="../assets/org/org_analytics.png" alt="Organization Analytics"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Organization Analytics</p>
             </div>
@@ -289,7 +303,7 @@
                 <li>Retry failed payments</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/org/org_payments.png" alt="Organization Payments"
+                <img src="../assets/org/org_payments.png" alt="Organization Payments"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Organization Payments</p>
             </div>
@@ -305,7 +319,7 @@
                 <li>Invoice status tracking</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/org/org_invoices.png" alt="Organization Invoices"
+                <img src="../assets/org/org_invoices.png" alt="Organization Invoices"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Organization Invoices</p>
             </div>
@@ -313,9 +327,19 @@
 
     </main>
 
-    <footer class="bg-gray-100 p-6 mt-12 border-t border-gray-300">
-        <div class="max-w-7xl mx-auto text-center text-sm text-gray-600">
-            <p>McSportng Application - Technical Documentation</p>
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; <span id="year"></span> McSportng. All rights reserved.</p>
+            <script>
+                document.getElementById('year').textContent = new Date().getFullYear();
+            </script>
+            <div class="mt-4 space-x-6">
+                <a href="coach.html" class="hover:text-white">Coach</a>
+                <a href="player.html" class="hover:text-white">Player</a>
+                <a href="team.html" class="hover:text-white">Team</a>
+                <a href="org.html" class="hover:text-white">Organization</a>
+            </div>
         </div>
     </footer>
 </body>

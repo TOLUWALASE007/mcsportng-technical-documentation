@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent Portal - McSportng Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-black min-h-screen flex flex-col">
+    <!-- NAVBAR -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="../football_portal/index.html" class="flex items-center">
+                    <img src="../assets/logo/mcsportng-l1.svg" alt="McSportng Logo" class="h-10 w-auto">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="agent.html" class="hover:text-green-600">Agent</a>
+                    <a href="coach.html" class="hover:text-green-600">Coach</a>
+                    <a href="player.html" class="hover:text-green-600">Player</a>
+                    <a href="team.html" class="hover:text-green-600">Team</a>
+                    <a href="org.html" class="hover:text-green-600">Organization</a>
+                </nav>
+
+                <!-- Mobile Navigation -->
+                <button class="md:hidden" id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-2 space-y-1">
+                <a href="agent.html" class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Agent</a>
+                <a href="coach.html" class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Coach</a>
+                <a href="player.html" class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Player</a>
+                <a href="team.html" class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Team</a>
+                <a href="org.html"
+                    class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Organization</a>
+            </div>
+        </div>
+
+
+        <script>
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Refactor: Add absolute positioning to overlay content instead of pushing it down
+            mobileMenu.classList.add('absolute', 'left-0', 'right-0', 'top-full', 'shadow-lg', 'z-50');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
+    </header>
+
+    <main class="p-4 md:p-8 max-w-7xl mx-auto flex-grow">
+        <h2 class="text-2xl font-semibold mb-6 text-green-700">Agent Portal</h2>
+        <div class="bg-gray-50 p-4 rounded mb-6">
+            <p><strong>User Role:</strong> Agent</p>
+            <p><strong>Base Path:</strong> <code class="bg-gray-200 px-2 py-1 rounded">/agent</code></p>
+        </div>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Dashboard Overview</h3>
+            <p><strong>Path:</strong> /agent/dashboard</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Agent performance metrics</li>
+                <li>Managed players and athletes overview</li>
+                <li>Recent scouting and recruitment activity</li>
+                <li>Quick access to contracts and player profiles</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/agent/agent_dashboard.png" alt="Agent Dashboard"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Agent Dashboard</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; <span id="year"></span> McSportng. All rights reserved.</p>
+            <script>
+                document.getElementById('year').textContent = new Date().getFullYear();
+            </script>
+            <div class="mt-4 space-x-6">
+                <a href="agent.html" class="hover:text-white">Agent</a>
+                <a href="coach.html" class="hover:text-white">Coach</a>
+                <a href="player.html" class="hover:text-white">Player</a>
+                <a href="team.html" class="hover:text-white">Team</a>
+                <a href="org.html" class="hover:text-white">Organization</a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player Portal - McSportng Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-black flex flex-col min-h-screen">
+    <!-- NAVBAR -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="../golf_portal/index.html" class="flex items-center">
+                    <img src="../assets/logo/mcsportng-l1.svg" alt="McSportng Logo" class="h-10 w-auto">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="coach.html" class="hover:text-green-600">Coach</a>
+                    <a href="player.html" class="hover:text-green-600">Player</a>
+                    <a href="org.html" class="hover:text-green-600">Organization</a>
+                </nav>
+
+                <!-- Mobile Navigation -->
+                <button class="md:hidden" id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-2 space-y-1">
+                <a href="coach.html" class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Coach</a>
+                <a href="player.html" class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Player</a>
+                <a href="org.html"
+                    class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Organization</a>
+            </div>
+        </div>
+
+
+        <script>
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Refactor: Add absolute positioning to overlay content instead of pushing it down
+            mobileMenu.classList.add('absolute', 'left-0', 'right-0', 'top-full', 'shadow-lg', 'z-50');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
+    </header>
+
+    <main class="p-4 md:p-8 max-w-7xl mx-auto flex-grow w-full">
+        <h2 class="text-2xl font-semibold mb-6 text-green-700">Player Portal</h2>
+        <div class="bg-gray-50 p-4 rounded mb-6">
+            <p><strong>User Role:</strong> Player/Athlete</p>
+            <p><strong>Base Path:</strong> <code class="bg-gray-200 px-2 py-1 rounded">/player</code></p>
+        </div>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Profile Management</h3>
+            <p><strong>Path:</strong> /player/dashboard</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Personal overview of general activities</li>
+                <li>Upload a personal posts</li>
+                <li>Upload a personal videos</li>
+                <li>Upload a personal photos</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/golf/golf_player_dashboard.png" alt="Player Dashboard"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Dashboard</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Schedule</h3>
+            <p><strong>Path:</strong> /player/schedule</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View upcoming matches, training, and events</li>
+                <li>Personalized player calendar</li>
+                <li>Event details and location information</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/golf/golf_player_schedule.png" alt="Player Schedule"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Schedule</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Announcements</h3>
+            <p><strong>Path:</strong> /player/announcements</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View announcements from teams and organizations</li>
+                <li>Filter announcements by relevance</li>
+                <li>Announcement history</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/golf/golf_player_announcements.png" alt="Player Announcements"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Announcements</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Membership</h3>
+            <p><strong>Path:</strong> /player/my-membership</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View membership details</li>
+                <li>Filter membership by relevance</li>
+                <li>Membership history</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/golf/golf_player_my_membership.png" alt="Player Membership"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Membership</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Tee Times</h3>
+            <p><strong>Path:</strong> /player/tee-times</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View tee times</li>
+                <li>Filter tee times by relevance</li>
+                <li>Tee times history</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/golf/golf_player_tee_times.png" alt="Player Tee Times"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Tee Times</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Rounds & Handicap</h3>
+            <p><strong>Path:</strong> /player/my-round</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View rounds</li>
+                <li>Filter rounds by relevance</li>
+                <li>Rounds history</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/golf/golf_player_my_round.png" alt="Player Rounds"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Rounds & Handicap</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Coaching Sessions</h3>
+            <p><strong>Path:</strong> /player/coaching-sessions</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View coaching sessions</li>
+                <li>Book a coaching session</li>
+                <li>Filter coaching sessions by relevance</li>
+                <li>Coaching sessions history</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/golf/golf_player_coaching_sessions.png" alt="Player Coaching Sessions"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Coaching Sessions</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Kitty Competitions</h3>
+            <p><strong>Path:</strong> /player/kitty</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View kitty competitions</li>
+                <li>Filter kitty competitions by relevance</li>
+                <li>Kitty competitions history</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/golf/golf_player_kitty.png" alt="Player Kitty Competitions"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Kitty Competitions</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Tournaments</h3>
+            <p><strong>Path:</strong> /player/tournaments</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View tournaments</li>
+                <li>Filter tournaments by relevance</li>
+                <li>Tournaments history</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/golf/golf_player_tournaments.png" alt="Player Tournaments"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Tournaments</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Order of Merit</h3>
+            <p><strong>Path:</strong> /player/stats/league-stats</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View personal league statistics</li>
+                <li>Compare performance within league</li>
+                <li>Season-by-season breakdown</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/golf/golf_player_league_stats.png" alt="Player League Stats"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player League Statistics</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Analytics</h3>
+            <p><strong>Path:</strong> /player/analytics</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Track individual performance trends</li>
+                <li>Progress tracking over time</li>
+                <li>Visual performance analytics</li>
+                <li>Strength and improvement insights</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/golf/golf_player_analytics.png" alt="Player Analytics"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Performance Analytics</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Subscription Plans</h3>
+            <p><strong>Path:</strong> /player/pricing</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View available subscription plans</li>
+                <li>Compare features across plans</li>
+                <li>Upgrade or downgrade subscription</li>
+                <li>View subscription status</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/golf/golf_player_pricing.png" alt="Player Pricing"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Subscription Plans</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">My Profile</h3>
+            <p><strong>Path:</strong> /player/my-profile</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Edit personal and professional details</li>
+                <li>Update bio, position, and physical attributes</li>
+                <li>Manage media and achievements</li>
+                <li>Privacy and visibility controls</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/golf/golf_player_my_profile.png" alt="My Profile"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Profile Management</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Settings</h3>
+            <p><strong>Path:</strong> /player/settings</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Manage account preferences</li>
+                <li>Update privacy settings</li>
+                <li>Manage notifications</li>
+                <li>Account security and authentication</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/golf/golf_player_settings.png" alt="Player Settings"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Account Settings</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; <span id="year"></span> McSportng. All rights reserved.</p>
+            <script>
+                document.getElementById('year').textContent = new Date().getFullYear();
+            </script>
+            <div class="mt-4 space-x-6">
+                <a href="coach.html" class="hover:text-white">Coach</a>
+                <a href="player.html" class="hover:text-white">Player</a>
+                <a href="org.html" class="hover:text-white">Organization</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player Portal - McSportng Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-black">
+    <!-- NAVBAR -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="../baseball_portal/index.html" class="flex items-center">
+                    <img src="../assets/logo/mcsportng-l1.svg" alt="McSportng Logo" class="h-10 w-auto">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="coach.html" class="hover:text-green-600">Coach</a>
+                    <a href="player.html" class="hover:text-green-600">Player</a>
+                    <a href="team.html" class="hover:text-green-600">Team</a>
+                    <a href="org.html" class="hover:text-green-600">Organization</a>
+                </nav>
+
+                <!-- Mobile Navigation -->
+                <button class="md:hidden" id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-2 space-y-1">
+                <a href="coach.html" class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Coach</a>
+                <a href="player.html" class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Player</a>
+                <a href="team.html" class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Team</a>
+                <a href="org.html"
+                    class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Organization</a>
+            </div>
+        </div>
+
+
+        <script>
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Refactor: Add absolute positioning to overlay content instead of pushing it down
+            mobileMenu.classList.add('absolute', 'left-0', 'right-0', 'top-full', 'shadow-lg', 'z-50');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
+    </header>
+
+    <main class="p-4 md:p-8 max-w-7xl mx-auto">
+        <h2 class="text-2xl font-semibold mb-6 text-green-700">Player Portal</h2>
+        <div class="bg-gray-50 p-4 rounded mb-6">
+            <p><strong>User Role:</strong> Player/Athlete</p>
+            <p><strong>Base Path:</strong> <code class="bg-gray-200 px-2 py-1 rounded">/player</code></p>
+        </div>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Profile Management</h3>
+            <p><strong>Path:</strong> /player/profile</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Personal overview of general activities</li>
+                <li>Upload a personal posts</li>
+                <li>Upload a personal videos</li>
+                <li>Upload a personal photos</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/player_dashboard.png" alt="Player Dashboard"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Dashboard</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Schedule</h3>
+            <p><strong>Path:</strong> /player/schedule</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View upcoming matches, training, and events</li>
+                <li>Personalized player calendar</li>
+                <li>Event details and location information</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/player_schedule.png" alt="Player Schedule"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Schedule</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Announcements</h3>
+            <p><strong>Path:</strong> /player/announcements</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View announcements from teams and organizations</li>
+                <li>Filter announcements by relevance</li>
+                <li>Announcement history</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/player_announcements.png" alt="Player Announcements"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Announcements</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Training Programs</h3>
+            <p><strong>Path:</strong> /player/training</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View assigned training programs</li>
+                <li>Exercise and drill breakdowns</li>
+                <li>Track training completion</li>
+                <li>Coach-assigned workouts</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/player_training.png" alt="Player Training Programs"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Training Programs</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Nutrition Plans</h3>
+            <p><strong>Path:</strong> /player/nutrition</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Personalized nutrition plans</li>
+                <li>Meal plans and dietary guidance</li>
+                <li>Nutrition goals and adherence tracking</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/player_nutrition.png" alt="Player Nutrition"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Nutrition Plans</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Injury Prevention</h3>
+            <p><strong>Path:</strong> /player/injury-prevention</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Injury prevention programs and routines</li>
+                <li>Warm-up and recovery guidelines</li>
+                <li>Physio-recommended exercises</li>
+                <li>Injury risk awareness</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/player_injury_prevention.png" alt="Injury Prevention"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Injury Prevention Plans</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">League Stats</h3>
+            <p><strong>Path:</strong> /player/stats/league-stats</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View personal league statistics</li>
+                <li>Compare performance within league</li>
+                <li>Season-by-season breakdown</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/player_league_stats.png" alt="Player League Stats"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player League Statistics</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">My Stats</h3>
+            <p><strong>Path:</strong> /player/my-stats</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View comprehensive personal statistics</li>
+                <li>Track game-by-game performance</li>
+                <li>Monitor historical data and achievements</li>
+                <li>Detailed metric breakdowns</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/player_my_stats.png" alt="Player Personal Stats"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Personal Statistics</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Analytics</h3>
+            <p><strong>Path:</strong> /player/analytics</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Track individual performance trends</li>
+                <li>Progress tracking over time</li>
+                <li>Visual performance analytics</li>
+                <li>Strength and improvement insights</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/player_analytics.png" alt="Player Analytics"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Performance Analytics</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Subscription Plans</h3>
+            <p><strong>Path:</strong> /player/pricing</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View available subscription plans</li>
+                <li>Compare features across plans</li>
+                <li>Upgrade or downgrade subscription</li>
+                <li>View subscription status</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/player_pricing.png" alt="Player Pricing"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Subscription Plans</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">My Profile</h3>
+            <p><strong>Path:</strong> /player/my-profile</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Edit personal and professional details</li>
+                <li>Update bio, position, and physical attributes</li>
+                <li>Manage media and achievements</li>
+                <li>Privacy and visibility controls</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/player/player_my_profile.png" alt="My Profile"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Profile Management</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; <span id="year"></span> McSportng. All rights reserved.</p>
+            <script>
+                document.getElementById('year').textContent = new Date().getFullYear();
+            </script>
+            <div class="mt-4 space-x-6">
+                <a href="coach.html" class="hover:text-white">Coach</a>
+                <a href="player.html" class="hover:text-white">Player</a>
+                <a href="team.html" class="hover:text-white">Team</a>
+                <a href="org.html" class="hover:text-white">Organization</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

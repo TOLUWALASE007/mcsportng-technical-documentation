@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organization Portal - McSportng Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-black">
+    <!-- NAVBAR -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="../football_portal/index.html" class="flex items-center">
+                    <img src="../assets/logo/mcsportng-l1.svg" alt="McSportng Logo" class="h-10 w-auto">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="agent.html" class="hover:text-green-600">Agent</a>
+                    <a href="coach.html" class="hover:text-green-600">Coach</a>
+                    <a href="player.html" class="hover:text-green-600">Player</a>
+                    <a href="team.html" class="hover:text-green-600">Team</a>
+                    <a href="org.html" class="hover:text-green-600">Organization</a>
+                </nav>
+
+                <!-- Mobile Navigation -->
+                <button class="md:hidden" id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-2 space-y-1">
+                <a href="agent.html" class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Agent</a>
+                <a href="coach.html" class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Coach</a>
+                <a href="player.html" class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Player</a>
+                <a href="team.html" class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Team</a>
+                <a href="org.html"
+                    class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Organization</a>
+            </div>
+        </div>
+
+
+        <script>
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Refactor: Add absolute positioning to overlay content instead of pushing it down
+            mobileMenu.classList.add('absolute', 'left-0', 'right-0', 'top-full', 'shadow-lg', 'z-50');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
+    </header>
+
+    <main class="p-4 md:p-8 max-w-7xl mx-auto">
+        <h2 class="text-2xl font-semibold mb-6 text-green-700">Organization Portal</h2>
+        <div class="bg-gray-50 p-4 rounded mb-6">
+            <p><strong>User Role:</strong> Organization Admin</p>
+            <p><strong>Base Path:</strong> <code class="bg-gray-200 px-2 py-1 rounded">/org</code></p>
+        </div>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Dashboard Overview</h3>
+            <p><strong>Path:</strong> /org/dashboard</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Quick stats (teams, players, events)</li>
+                <li>Recent activity logs</li>
+                <li>Quick actions and notifications</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/org_dashboard.png" alt="Organization Dashboard"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Dashboard</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Team Management</h3>
+            <p><strong>Path:</strong> /org/teams</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Create and manage teams</li>
+                <li>Assign team admins</li>
+                <li>View team rosters</li>
+                <li>Edit team details (name, logo, colors)</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/org_teams.png" alt="Organization Teams"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Teams</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">League Standings</h3>
+            <p><strong>Path:</strong> /org/league-standings</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View current standings</li>
+                <li>Filter by season</li>
+                <li>Export data</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/org_league_standings.png" alt="Organization League Standings"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization League Standings</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Season Management</h3>
+            <p><strong>Path:</strong> /org/seasons</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Create and manage seasons</li>
+                <li>Schedule fixtures</li>
+                <li>Generate standings</li>
+                <li>Access season archives</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/org_seasons.png" alt="Organization Seasons"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Seasons</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Coaches Management</h3>
+            <p><strong>Path:</strong> /org/coaches</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View and manage all organization coaches</li>
+                <li>Assign coaches to teams and seasons</li>
+                <li>Manage roles and permissions</li>
+                <li>Activate or deactivate coach accounts</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/org_coaches.png" alt="Organization Coaches"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Coaches Management</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Players Management</h3>
+            <p><strong>Path:</strong> /org/players</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View all registered players</li>
+                <li>Assign players to teams</li>
+                <li>Manage eligibility and status</li>
+                <li>View player history and movement</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/org_players.png" alt="Organization Players"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Players Management</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Transfers</h3>
+            <p><strong>Path:</strong> /org/transfers</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Initiate and approve player transfers</li>
+                <li>Track transfer history</li>
+                <li>Manage transfer windows</li>
+                <li>Audit transfer approvals</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/org_transfers.png" alt="Organization Transfers"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Transfers</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Contracts</h3>
+            <p><strong>Path:</strong> /org/contracts</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Create and manage player and coach contracts</li>
+                <li>Track contract duration and expiry</li>
+                <li>Store signed documents</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/org_contracts.png" alt="Organization Contracts"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Contracts Management</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Stats Management</h3>
+            <p><strong>Path:</strong> /org/stats-management</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Centralized stats verification</li>
+                <li>Sport-specific stat views</li>
+                <li>Bulk approval</li>
+                <li>Dispute resolution</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/org_league_stats.png" alt="Organization Stats Management"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Stats Management</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Calendar & Scheduling</h3>
+            <p><strong>Path:</strong> /org/calendar</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Organization-wide event calendar</li>
+                <li>Matches, training, and meetings</li>
+                <li>Conflict detection</li>
+                <li>Calendar sharing</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/org_calendar.png" alt="Organization Calendar"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Calendar</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Venues</h3>
+            <p><strong>Path:</strong> /org/venues</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Manage stadiums and facilities</li>
+                <li>Assign venues to events</li>
+                <li>Track availability</li>
+                <li>Store venue details and capacity</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/org_venues.png" alt="Organization Venues"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Venues</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Communications</h3>
+            <p><strong>Path:</strong> /org/communications</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Send messages to teams and users</li>
+                <li>Email and in-app notifications</li>
+                <li>Audience targeting</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/org_communications.png" alt="Organization Communications"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Communications</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Communication Templates</h3>
+            <p><strong>Path:</strong> /org/communications/templates</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Create reusable message templates</li>
+                <li>Email and notification formatting</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/org_communications_templates.png" alt="Organization Communication Templates"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Communication Templates</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Analytics</h3>
+            <p><strong>Path:</strong> /org/analytics</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Performance analytics dashboards</li>
+                <li>Participation and growth metrics</li>
+                <li>Exportable reports</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/org_analytics.png" alt="Organization Analytics"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Analytics</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Billing Payments</h3>
+            <p><strong>Path:</strong> /org/billing/payments</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View payment history</li>
+                <li>Manage payment methods</li>
+                <li>Retry failed payments</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/org_payments.png" alt="Organization Payments"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Payments</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Billing Invoices</h3>
+            <p><strong>Path:</strong> /org/billing/invoices</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View generated invoices</li>
+                <li>Download invoice PDFs</li>
+                <li>Invoice status tracking</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/org_invoices.png" alt="Organization Invoices"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Invoices</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; <span id="year"></span> McSportng. All rights reserved.</p>
+            <script>
+                document.getElementById('year').textContent = new Date().getFullYear();
+            </script>
+            <div class="mt-4 space-x-6">
+                <a href="agent.html" class="hover:text-white">Agent</a>
+                <a href="coach.html" class="hover:text-white">Coach</a>
+                <a href="player.html" class="hover:text-white">Player</a>
+                <a href="team.html" class="hover:text-white">Team</a>
+                <a href="org.html" class="hover:text-white">Organization</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

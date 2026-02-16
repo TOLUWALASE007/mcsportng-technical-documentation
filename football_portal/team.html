@@ -9,42 +9,58 @@
 </head>
 
 <body class="bg-white text-black">
-    <header class="bg-white text-green-700 p-4 md:p-6 border-b-2 border-green-700 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex justify-between items-center">
-                <a href="index.html">
-                    <img src="assets/logo/mcsportng-l1.svg" alt="McSportng" class="h-8 md:h-12">
+    <!-- NAVBAR -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="../football_portal/index.html" class="flex items-center">
+                    <img src="../assets/logo/mcsportng-l1.svg" alt="McSportng Logo" class="h-10 w-auto">
                 </a>
-                <button id="menuToggle" class="md:hidden text-green-700 focus:outline-none">
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="agent.html" class="hover:text-green-600">Agent</a>
+                    <a href="coach.html" class="hover:text-green-600">Coach</a>
+                    <a href="player.html" class="hover:text-green-600">Player</a>
+                    <a href="team.html" class="hover:text-green-600">Team</a>
+                    <a href="org.html" class="hover:text-green-600">Organization</a>
+                </nav>
+
+                <!-- Mobile Navigation -->
+                <button class="md:hidden" id="mobile-menu-button">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
+                            d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
-                <nav id="menu"
-                    class="hidden md:flex md:flex-row md:flex-wrap gap-3 md:gap-4 absolute md:static top-full left-0 w-full md:w-auto bg-white md:bg-transparent border-b-2 md:border-none border-green-700 p-4 md:p-0 shadow-lg md:shadow-none">
-                    <a href="auth.html" class="hover:text-green-900 py-2 md:py-0">Authentication</a>
-                    <a href="org.html" class="hover:text-green-900 py-2 md:py-0">Organization</a>
-                    <a href="team.html" class="hover:text-green-900 font-semibold py-2 md:py-0">Team</a>
-                    <a href="coach.html" class="hover:text-green-900 py-2 md:py-0">Coach</a>
-                    <a href="agent.html" class="hover:text-green-900 py-2 md:py-0">Agent</a>
-                    <a href="player.html" class="hover:text-green-900 py-2 md:py-0">Player</a>
-                    <a href="admin.html" class="hover:text-green-900 py-2 md:py-0">Super Admin</a>
-                    <a href="public.html" class="hover:text-green-900 py-2 md:py-0">Public Pages</a>
-                    <a href="sports.html" class="hover:text-green-900 py-2 md:py-0">Sport Modules</a>
-                </nav>
             </div>
         </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-2 space-y-1">
+                <a href="agent.html" class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Agent</a>
+                <a href="coach.html" class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Coach</a>
+                <a href="player.html" class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Player</a>
+                <a href="team.html" class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Team</a>
+                <a href="org.html"
+                    class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Organization</a>
+            </div>
+        </div>
+
+
+        <script>
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Refactor: Add absolute positioning to overlay content instead of pushing it down
+            mobileMenu.classList.add('absolute', 'left-0', 'right-0', 'top-full', 'shadow-lg', 'z-50');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
     </header>
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const menu = document.getElementById('menu');
-        menuToggle.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            menu.classList.toggle('flex');
-            menu.classList.toggle('flex-col');
-        });
-    </script>
 
     <main class="p-4 md:p-8 max-w-7xl mx-auto">
         <h2 class="text-2xl font-semibold mb-6 text-green-700">Team Portal</h2>
@@ -63,7 +79,7 @@
                 <li>Quick access to roster and stats</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/team/team_dashboard.png" alt="Team Dashboard"
+                <img src="../assets/team/team_dashboard.png" alt="Team Dashboard"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Team Dashboard</p>
             </div>
@@ -79,7 +95,7 @@
                 <li>Manage coaching staff roles and permissions</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/team/team_coach.png" alt="Team Coach"
+                <img src="../assets/team/team_coach.png" alt="Team Coach"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Team Coach</p>
             </div>
@@ -97,7 +113,7 @@
                 <li>View player profiles and statistics</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/team/team_players.png" alt="Team Players"
+                <img src="../assets/team/team_players.png" alt="Team Players"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Team Players</p>
             </div>
@@ -113,7 +129,7 @@
                 <li>View salary and compensation details</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/team/team_contracts.png" alt="Team Contracts"
+                <img src="../assets/team/team_contracts.png" alt="Team Contracts"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Team Contracts</p>
             </div>
@@ -129,7 +145,7 @@
                 <li>Manage venue and facility bookings</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/team/team_calendar.png" alt="Team Calendar"
+                <img src="../assets/team/team_calendar.png" alt="Team Calendar"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Team Calendar</p>
             </div>
@@ -145,7 +161,7 @@
                 <li>Access historical league data and archives</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/team/team_league_stats.png" alt="Team League Stats"
+                <img src="../assets/team/team_league_stats.png" alt="Team League Stats"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Team League Stats</p>
             </div>
@@ -162,7 +178,7 @@
                 <li>Historical stats viewing</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/team/team_stats_management.png" alt="Team Stats Management"
+                <img src="../assets/team/team_stats_management.png" alt="Team Stats Management"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Team Stats Management</p>
             </div>
@@ -177,7 +193,7 @@
                     <li>Notification management and alerts</li>
                 </ul>
                 <div class="mt-6">
-                    <img src="assets/team/team_communications.png" alt="Team Communications"
+                    <img src="../assets/team/team_communications.png" alt="Team Communications"
                         class="w-full rounded-lg shadow-md border border-gray-200">
                     <p class="text-sm text-gray-500 mt-2 text-center">Team Communications</p>
                 </div>
@@ -193,7 +209,7 @@
                     <li>Pin important notices to the dashboard</li>
                 </ul>
                 <div class="mt-6">
-                    <img src="assets/team/team_announcements.png" alt="Team Announcements"
+                    <img src="../assets/team/team_announcements.png" alt="Team Announcements"
                         class="w-full rounded-lg shadow-md border border-gray-200">
                     <p class="text-sm text-gray-500 mt-2 text-center">Team Announcements</p>
                 </div>
@@ -209,7 +225,7 @@
                     <li>Attach relevant documents or links to tasks</li>
                 </ul>
                 <div class="mt-6">
-                    <img src="assets/team/team_assignments.png" alt="Team Assignments"
+                    <img src="../assets/team/team_assignments.png" alt="Team Assignments"
                         class="w-full rounded-lg shadow-md border border-gray-200">
                     <p class="text-sm text-gray-500 mt-2 text-center">Team Assignments</p>
                 </div>
@@ -225,7 +241,7 @@
                     <li>Manage media permissions and visibility</li>
                 </ul>
                 <div class="mt-6">
-                    <img src="assets/team/team_media.png" alt="Team Media"
+                    <img src="../assets/team/team_media.png" alt="Team Media"
                         class="w-full rounded-lg shadow-md border border-gray-200">
                     <p class="text-sm text-gray-500 mt-2 text-center">Team Media</p>
                 </div>
@@ -241,7 +257,7 @@
                     <li>Audit trails for document access</li>
                 </ul>
                 <div class="mt-6">
-                    <img src="assets/team/team_compliance_documents.png" alt="Team Compliance Documents"
+                    <img src="../assets/team/team_compliance_documents.png" alt="Team Compliance Documents"
                         class="w-full rounded-lg shadow-md border border-gray-200">
                     <p class="text-sm text-gray-500 mt-2 text-center">Team Compliance Documents</p>
                 </div>
@@ -257,7 +273,7 @@
                     <li>Automated billing reminders</li>
                 </ul>
                 <div class="mt-6">
-                    <img src="assets/team/team_billing_invoices.png" alt="Team Billing Invoices"
+                    <img src="../assets/team/team_billing_invoices.png" alt="Team Billing Invoices"
                         class="w-full rounded-lg shadow-md border border-gray-200">
                     <p class="text-sm text-gray-500 mt-2 text-center">Team Billing Invoices</p>
                 </div>
@@ -273,7 +289,7 @@
                     <li>Reconcile payments with invoices</li>
                 </ul>
                 <div class="mt-6">
-                    <img src="assets/team/team_billing_payments.png" alt="Team Billing Payments"
+                    <img src="../assets/team/team_billing_payments.png" alt="Team Billing Payments"
                         class="w-full rounded-lg shadow-md border border-gray-200">
                     <p class="text-sm text-gray-500 mt-2 text-center">Team Billing Payments</p>
                 </div>
@@ -289,7 +305,7 @@
                     <li>Attendance and engagement metrics</li>
                 </ul>
                 <div class="mt-6">
-                    <img src="assets/team/team_analytics.png" alt="Team Analytics"
+                    <img src="../assets/team/team_analytics.png" alt="Team Analytics"
                         class="w-full rounded-lg shadow-md border border-gray-200">
                     <p class="text-sm text-gray-500 mt-2 text-center">Team Analytics</p>
                 </div>
@@ -321,9 +337,20 @@
         </section>
     </main>
 
-    <footer class="bg-gray-100 p-6 mt-12 border-t border-gray-300">
-        <div class="max-w-7xl mx-auto text-center text-sm text-gray-600">
-            <p>McSportng Application - Technical Documentation</p>
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; <span id="year"></span> McSportng. All rights reserved.</p>
+            <script>
+                document.getElementById('year').textContent = new Date().getFullYear();
+            </script>
+            <div class="mt-4 space-x-6">
+                <a href="agent.html" class="hover:text-white">Agent</a>
+                <a href="coach.html" class="hover:text-white">Coach</a>
+                <a href="player.html" class="hover:text-white">Player</a>
+                <a href="team.html" class="hover:text-white">Team</a>
+                <a href="org.html" class="hover:text-white">Organization</a>
+            </div>
         </div>
     </footer>
 </body>

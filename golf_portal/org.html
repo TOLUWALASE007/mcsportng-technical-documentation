@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organization Portal - McSportng Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-black flex flex-col min-h-screen">
+    <!-- NAVBAR -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="../golf_portal/index.html" class="flex items-center">
+                    <img src="../assets/logo/mcsportng-l1.svg" alt="McSportng Logo" class="h-10 w-auto">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="coach.html" class="hover:text-green-600">Coach</a>
+                    <a href="player.html" class="hover:text-green-600">Player</a>
+                    <a href="org.html" class="hover:text-green-600">Organization</a>
+                </nav>
+
+                <!-- Mobile Navigation -->
+                <button class="md:hidden" id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-2 space-y-1">
+                <a href="coach.html" class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Coach</a>
+                <a href="player.html" class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Player</a>
+                <a href="org.html"
+                    class="block px-4 py-2 text-gray-600 hover:text-green-600 transition">Organization</a>
+            </div>
+        </div>
+
+
+        <script>
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Refactor: Add absolute positioning to overlay content instead of pushing it down
+            mobileMenu.classList.add('absolute', 'left-0', 'right-0', 'top-full', 'shadow-lg', 'z-50');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
+    </header>
+
+    <main class="p-4 md:p-8 max-w-7xl mx-auto flex-grow w-full">
+        <h2 class="text-2xl font-semibold mb-6 text-green-700">Organization Portal</h2>
+        <div class="bg-gray-50 p-4 rounded mb-6">
+            <p><strong>User Role:</strong> Organization Admin</p>
+            <p><strong>Base Path:</strong> <code class="bg-gray-200 px-2 py-1 rounded">/org</code></p>
+        </div>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Dashboard Overview</h3>
+            <p><strong>Path:</strong> /org/dashboard</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Quick stats (teams, players, events)</li>
+                <li>Recent activity logs</li>
+                <li>Quick actions and notifications</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_dashboard.png" alt="Organization Dashboard"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Dashboard</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Members Management</h3>
+            <p><strong>Path:</strong> /org/players</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View all registered members</li>
+                <li>Assign members to teams</li>
+                <li>Manage eligibility and status</li>
+                <li>View member history and movement</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_member.png" alt="Organization Members"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Members Management</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Membership</h3>
+            <p><strong>Path:</strong> /org/membership</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Manage membership types and fees</li>
+                <li>Track registration status and renewals</li>
+                <li>Export membership data for reporting</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_membership.png" alt="Organization Membership"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Membership</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Tee Times</h3>
+            <p><strong>Path:</strong> /org/tee-times</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Schedule and manage tee time slots</li>
+                <li>Handle player bookings and reservations</li>
+                <li>Configure course availability and intervals</li>
+                <li>Monitor daily schedules and check-ins</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_tee.png" alt="Organization Tee Times"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Tee Times</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Kitty Competitions</h3>
+            <p><strong>Path:</strong> /org/kitty</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Manage casual betting competitions and prize pools</li>
+                <li>Define entry requirements and payout structures</li>
+                <li>Track participant entries and financial balances</li>
+                <li>Monitor competition results and automate distributions</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_kitty.png" alt="Organization Kitty"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Kitty</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Calendar & Events</h3>
+            <p><strong>Path:</strong> /org/calendar</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Organization-wide event calendar</li>
+                <li>Matches, training, and meetings</li>
+                <li>Conflict detection</li>
+                <li>Calendar sharing</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_calendar.png" alt="Organization Calendar"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Calendar</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Stats Management</h3>
+            <p><strong>Path:</strong> /org/stats-management</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Centralized stats verification</li>
+                <li>Sport-specific stat views</li>
+                <li>View and approve/reject match stats</li>
+                <li>Dispute resolution</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_stats.png" alt="Organization Stats Management"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Stats Management</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Seasons</h3>
+            <p><strong>Path:</strong> /org/seasons</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Manage seasons and programs for your organization</li>
+                <li>Create and manage seasons</li>
+                <li>Manage programs</li>
+                <li>Manage seasons and programs for your organization</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_seasons.png" alt="Organization Seasons"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Seasons</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Courses and Facilities</h3>
+            <p><strong>Path:</strong> /org/venues</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Manage stadiums and facilities</li>
+                <li>Assign venues to events</li>
+                <li>Track availability</li>
+                <li>Store venue details and capacity</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_venues.png" alt="Organization Venues"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Venues</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Club Statistics</h3>
+            <p><strong>Path:</strong> /org/league-stats</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View club statistics</li>
+                <li>Track team and individual player statistics</li>
+                <li>Filter statistics by season, division, or tournament</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_club_statistics.png" alt="Organization Club Statistics"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Club Statistics</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Communications</h3>
+            <p><strong>Path:</strong> /org/communications</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Send messages to teams and users</li>
+                <li>Email and in-app notifications</li>
+                <li>Audience targeting</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_communications.png" alt="Organization Communications"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Communications</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Message Templates</h3>
+            <p><strong>Path:</strong> /org/communications/templates</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Create reusable message templates</li>
+                <li>Email and notification formatting</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_communications_templates.png"
+                    alt="Organization Communication Templates"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Message Templates</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Announcements</h3>
+            <p><strong>Path:</strong> /org/announcements</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Share important updates with your teams</li>
+                <li>Email and in-app notifications</li>
+                <li>Audience targeting</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_announcements.png" alt="Organization Announcements"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Announcements</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Assignments</h3>
+            <p><strong>Path:</strong> /org/assignments</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Manage volunteer tasks and assignments</li>
+                <li>Assign tasks to volunteers</li>
+                <li>Track task completion</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_assignments.png" alt="Organization Assignments"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Assignments</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Media & Files</h3>
+            <p><strong>Path:</strong> /org/media-files</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Share photos, videos, and documents with your teams</li>
+                <li>Organize media and files</li>
+                <li>Manage file access</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_media.png" alt="Organization Media & Files"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Media & Files</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Waivers</h3>
+            <p><strong>Path:</strong> /org/compliance/waivers</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Manage waivers for your teams</li>
+                <li>Create and manage waivers</li>
+                <li>Track waiver status</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_waivers.png" alt="Organization Waivers"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Waivers</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Background Checks</h3>
+            <p><strong>Path:</strong> /org/compliance/background-checks</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Manage background checks for coaches, staff, and players</li>
+                <li>Create and manage background checks</li>
+                <li>Track background check status</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_background_checks.png" alt="Organization Background Checks"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Background Checks</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Documents</h3>
+            <p><strong>Path:</strong> /org/compliance/documents</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Manage documents for your teams</li>
+                <li>Create and manage documents</li>
+                <li>Track document status</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_documents.png" alt="Organization Documents"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Documents</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Audit Logs</h3>
+            <p><strong>Path:</strong> /org/compliance/audit-logs</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View activity logs and compliance reports</li>
+                <li>Track user activity</li>
+                <li>Generate compliance reports</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_audit.png" alt="Organization Audit Logs"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Audit Logs</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Analytics</h3>
+            <p><strong>Path:</strong> /org/analytics</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Performance analytics dashboards</li>
+                <li>Participation and growth metrics</li>
+                <li>Exportable reports</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/org_analytics.png" alt="Organization Analytics"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Analytics</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Billing Payments</h3>
+            <p><strong>Path:</strong> /org/billing/payments</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View payment history</li>
+                <li>Manage payment methods</li>
+                <li>Retry failed payments</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/org_payments.png" alt="Organization Payments"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Payments</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Billing Invoices</h3>
+            <p><strong>Path:</strong> /org/billing/invoices</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View generated invoices</li>
+                <li>Download invoice PDFs</li>
+                <li>Invoice status tracking</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/org_invoices.png" alt="Organization Invoices"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Invoices</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; <span id="year"></span> McSportng. All rights reserved.</p>
+            <script>
+                document.getElementById('year').textContent = new Date().getFullYear();
+            </script>
+            <div class="mt-4 space-x-6">
+                <a href="coach.html" class="hover:text-white">Coach</a>
+                <a href="player.html" class="hover:text-white">Player</a>
+                <a href="org.html" class="hover:text-white">Organization</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
