@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Public Pages - McSportng Documentation</title>
+    <title>Scout Portal - McSportng Documentation</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -61,142 +61,153 @@
             });
         </script>
     </header>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const menu = document.getElementById('menu');
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+            menu.classList.toggle('flex-col');
+        });
+    </script>
+
     <main class="p-4 md:p-8 max-w-7xl mx-auto">
-        <h2 class="text-2xl font-semibold mb-6 text-green-700">Public Pages</h2>
+        <h2 class="text-2xl font-semibold mb-6 text-green-700">Scout Portal</h2>
         <div class="bg-gray-50 p-4 rounded mb-6">
-            <p><strong>Access:</strong> No authentication required</p>
-            <p><strong>Purpose:</strong> Marketing, information, and public data access</p>
+            <p><strong>User Role:</strong> Scout</p>
+            <p><strong>Base Path:</strong> <code class="bg-gray-200 px-2 py-1 rounded">/scout</code></p>
         </div>
 
         <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Landing Page</h3>
-            <p><strong>Path:</strong> /</p>
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Scout Dashboard</h3>
+            <p><strong>Path:</strong> /scout/dashboard</p>
             <ul class="list-disc pl-6 mt-3">
-                <li>Hero section with value proposition</li>
-                <li>Feature highlights</li>
-                <li>Call-to-action buttons (Sign Up, Login)</li>
-                <li>Testimonials and social proof</li>
-                <li>Footer with links</li>
+                <li>View and track potential talent and player performance</li>
+                <li>Create and manage detailed scouting reports</li>
+                <li>Access a personalized watchlist of players</li>
+                <li>Schedule and manage match observation sessions</li>
+                <li>Analyze player statistics and career progression</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/public/public_landing.png" alt="Organization Invoices"
+                <img src="assets/scout/scout_dashboard.png" alt="Scout Dashboard"
                     class="w-full rounded-lg shadow-md border border-gray-200">
-                <p class="text-sm text-gray-500 mt-2 text-center">Landing Page</p>
+                <p class="text-sm text-gray-500 mt-2 text-center">Scout Dashboard</p>
             </div>
         </section>
 
         <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">About Page</h3>
-            <p><strong>Path:</strong> /about</p>
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Discover Players</h3>
+            <p><strong>Path:</strong> /scout/discover</p>
             <ul class="list-disc pl-6 mt-3">
-                <li>Company mission and vision</li>
-                <li>Team information</li>
-                <li>Platform history</li>
-                <li>Supported sports overview</li>
+                <li>Search and filter players using advanced criteria and attributes</li>
+                <li>Explore a global database of emerging talent and prospects</li>
+                <li>Identify players based on specific roles and tactical needs</li>
+                <li>View detailed player profiles, career history, and highlights</li>
+                <li>Shortlist potential signings and add them to your watchlist</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/public/public_about.png" alt="About Page"
+                <img src="assets/scout/scout_discover.png" alt="Discover Players"
                     class="w-full rounded-lg shadow-md border border-gray-200">
-                <p class="text-sm text-gray-500 mt-2 text-center">About Page</p>
+                <p class="text-sm text-gray-500 mt-2 text-center">Discover Players</p>
             </div>
         </section>
 
         <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Contact Page</h3>
-            <p><strong>Path:</strong> /contact</p>
+            <h3 class="text-xl font-semibold mb-3 text-green-700">League Explorer</h3>
+            <p><strong>Path:</strong> /scout/leagues</p>
             <ul class="list-disc pl-6 mt-3">
-                <li>Contact form (name, email, message)</li>
-                <li>Support email and phone</li>
-                <li>Office locations</li>
-                <li>Social media links</li>
+                <li>Track standings and top performers across competitions</li>
+                <li>Analyze league trends and patterns</li>
+                <li>Identify emerging leagues and competitions</li>
+                <li>View detailed league information</li>
+                <li>Shortlist potential leagues and add them to your watchlist</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/public/public_contact.png" alt="Contact Page"
+                <img src="assets/scout/scout_leagues.png" alt="League Explorer"
                     class="w-full rounded-lg shadow-md border border-gray-200">
-                <p class="text-sm text-gray-500 mt-2 text-center">Contact Page</p>
+                <p class="text-sm text-gray-500 mt-2 text-center">League Explorer</p>
             </div>
         </section>
 
         <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Players Directory</h3>
-            <p><strong>Path:</strong> /players</p>
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Player Comparison</h3>
+            <p><strong>Path:</strong> /scout/compare</p>
             <ul class="list-disc pl-6 mt-3">
-                <li>Public directory of registered athletes</li>
-                <li>Search players by name, sport, position, or club</li>
-                <li>View public player profiles (if enabled)</li>
-                <li>Filter by sport (Football, Baseball, Golf)</li>
+                <li>Compare up to 4 players side-by-side</li>
+                <li>Analyze player statistics and attributes</li>
+                <li>Identify strengths and weaknesses</li>
+                <li>Make informed decisions about potential signings</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/public/public_players.png" alt="Public Players Directory"
+                <img src="assets/scout/scout_compare.png" alt="Player Comparison"
                     class="w-full rounded-lg shadow-md border border-gray-200">
-                <p class="text-sm text-gray-500 mt-2 text-center">Public Players Directory</p>
+                <p class="text-sm text-gray-500 mt-2 text-center">Player Comparison</p>
             </div>
         </section>
 
         <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Clubs Directory</h3>
-            <p><strong>Path:</strong> /clubs</p>
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Watchlists</h3>
+            <p><strong>Path:</strong> /scout/watchlists</p>
             <ul class="list-disc pl-6 mt-3">
-                <li>Search and browse clubs and teams</li>
-                <li>Supports Football, Baseball, and Golf</li>
-                <li>View club profiles, teams, and basic stats</li>
-                <li>Filter by sport and location</li>
+                <li>Organize players into custom shortlists</li>
+                <li>Track potential signings and add them to your watchlist</li>
+                <li>View detailed player profiles, career history, and highlights</li>
+                <li>Make informed decisions about potential signings</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/public/public_clubs.png" alt="Public Clubs"
+                <img src="assets/scout/scout_watchlists.png" alt="Watchlists"
                     class="w-full rounded-lg shadow-md border border-gray-200">
-                <p class="text-sm text-gray-500 mt-2 text-center">Public Clubs and Teams</p>
+                <p class="text-sm text-gray-500 mt-2 text-center">Watchlists</p>
             </div>
         </section>
 
         <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Leagues</h3>
-            <p><strong>Path:</strong> /leagues</p>
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Scouting Reports</h3>
+            <p><strong>Path:</strong> /scout/reports</p>
             <ul class="list-disc pl-6 mt-3">
-                <li>Browse football leagues</li>
-                <li>View league standings and tables</li>
-                <li>Access player and team leaderboards</li>
-                <li>Season-based filtering</li>
+                <li>Create and manage detailed scouting reports</li>
+                <li>Track potential signings and add them to your watchlist</li>
+                <li>View detailed player profiles, career history, and highlights</li>
+                <li>Make informed decisions about potential signings</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/public/public_leagues.png" alt="Public Leagues"
+                <img src="assets/scout/scout_reports.png" alt="Scouting Reports"
                     class="w-full rounded-lg shadow-md border border-gray-200">
-                <p class="text-sm text-gray-500 mt-2 text-center">Football Leagues Overview</p>
+                <p class="text-sm text-gray-500 mt-2 text-center">Scouting Reports</p>
             </div>
         </section>
 
         <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Matches</h3>
-            <p><strong>Path:</strong> /matches</p>
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Analytics</h3>
+            <p><strong>Path:</strong> /scout/analytics</p>
             <ul class="list-disc pl-6 mt-3">
-                <li>View upcoming football matches</li>
-                <li>Live scores for ongoing matches</li>
-                <li>Recent match results</li>
-                <li>Coverage focused on Nigerian football</li>
+                <li>Your scouting activity insights</li>
+                <li>Track your scouting activity</li>
+                <li>View detailed player profiles, career history, and highlights</li>
+                <li>Make informed decisions about potential signings</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/public/public_matches.png" alt="Public Matches"
+                <img src="assets/scout/scout_analytics.png" alt="Analytics"
                     class="w-full rounded-lg shadow-md border border-gray-200">
-                <p class="text-sm text-gray-500 mt-2 text-center">Football Matches and Live Scores</p>
+                <p class="text-sm text-gray-500 mt-2 text-center">Analytics</p>
             </div>
         </section>
 
         <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">News</h3>
-            <p><strong>Path:</strong> /news</p>
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Settings</h3>
+            <p><strong>Path:</strong> /scout/settings</p>
             <ul class="list-disc pl-6 mt-3">
-                <li>Latest sports news and updates</li>
-                <li>Match reports and analysis</li>
-                <li>Transfer news and rumors</li>
-                <li>Editorial features and interviews</li>
+                <li>Manage your account settings</li>
+                <li>Update your profile information</li>
+                <li>Change your password</li>
+                <li>Manage your notification preferences</li>
             </ul>
             <div class="mt-6">
-                <img src="assets/public/public_news.png" alt="Sports News"
+                <img src="assets/scout/scout_settings.png" alt="Settings"
                     class="w-full rounded-lg shadow-md border border-gray-200">
-                <p class="text-sm text-gray-500 mt-2 text-center">Sports News and Updates</p>
+                <p class="text-sm text-gray-500 mt-2 text-center">Settings</p>
             </div>
         </section>
-
     </main>
 
     <!-- FOOTER -->
