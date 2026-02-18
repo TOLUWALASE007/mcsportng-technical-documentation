@@ -26,6 +26,7 @@ The project is organized into a root directory containing general documentation 
 - `auth.html`: User authentication, registration, and onboarding workflows.
 - `public.html`: Details on public-facing pages and accessible content.
 - `sports.html`: Overview of sport-specific modules and features.
+- `scout.html`: Documentation for Scout portal and features.
 
 ### Sport Portals
 
