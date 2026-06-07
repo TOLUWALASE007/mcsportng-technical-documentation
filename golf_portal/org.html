@@ -72,6 +72,8 @@
                 <li>Quick stats (teams, players, events)</li>
                 <li>Recent activity logs</li>
                 <li>Quick actions and notifications</li>
+                <li>Identify club type and current subscription status via tier tags</li>
+                <li>Review current subscription status tier details</li>
             </ul>
             <div class="mt-6">
                 <img src="../assets/org/golf/golf_org_dashboard.png" alt="Organization Dashboard"
@@ -80,68 +82,40 @@
             </div>
         </section>
 
+
         <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Members Management</h3>
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Assignments</h3>
+            <p><strong>Path:</strong> /org/assignments</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>View own assignment and create team assignments</li>
+                <li>Manage tasks and assignments</li>
+                <li>Assign tasks to team or individual</li>
+                <li>Track task completion</li>
+
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_assignment.png" alt="Organization assignment"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization assignment</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Players Management</h3>
             <p><strong>Path:</strong> /org/players</p>
             <ul class="list-disc pl-6 mt-3">
-                <li>View all registered members</li>
+                <li>View all registered players</li>
                 <li>Assign members to teams</li>
                 <li>Manage eligibility and status</li>
                 <li>View member history and movement</li>
             </ul>
             <div class="mt-6">
-                <img src="../assets/org/golf/golf_org_member.png" alt="Organization Members"
+                <img src="../assets/org/golf/golf_org_players.png" alt="Organization Members"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Organization Members Management</p>
             </div>
         </section>
 
-        <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Membership</h3>
-            <p><strong>Path:</strong> /org/membership</p>
-            <ul class="list-disc pl-6 mt-3">
-                <li>Manage membership types and fees</li>
-                <li>Track registration status and renewals</li>
-                <li>Export membership data for reporting</li>
-            </ul>
-            <div class="mt-6">
-                <img src="../assets/org/golf/golf_org_membership.png" alt="Organization Membership"
-                    class="w-full rounded-lg shadow-md border border-gray-200">
-                <p class="text-sm text-gray-500 mt-2 text-center">Organization Membership</p>
-            </div>
-        </section>
-
-        <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Tee Times</h3>
-            <p><strong>Path:</strong> /org/tee-times</p>
-            <ul class="list-disc pl-6 mt-3">
-                <li>Schedule and manage tee time slots</li>
-                <li>Handle player bookings and reservations</li>
-                <li>Configure course availability and intervals</li>
-                <li>Monitor daily schedules and check-ins</li>
-            </ul>
-            <div class="mt-6">
-                <img src="../assets/org/golf/golf_org_tee.png" alt="Organization Tee Times"
-                    class="w-full rounded-lg shadow-md border border-gray-200">
-                <p class="text-sm text-gray-500 mt-2 text-center">Organization Tee Times</p>
-            </div>
-        </section>
-
-        <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Kitty Competitions</h3>
-            <p><strong>Path:</strong> /org/kitty</p>
-            <ul class="list-disc pl-6 mt-3">
-                <li>Manage casual betting competitions and prize pools</li>
-                <li>Define entry requirements and payout structures</li>
-                <li>Track participant entries and financial balances</li>
-                <li>Monitor competition results and automate distributions</li>
-            </ul>
-            <div class="mt-6">
-                <img src="../assets/org/golf/golf_org_kitty.png" alt="Organization Kitty"
-                    class="w-full rounded-lg shadow-md border border-gray-200">
-                <p class="text-sm text-gray-500 mt-2 text-center">Organization Kitty</p>
-            </div>
-        </section>
 
         <section class="mb-8">
             <h3 class="text-xl font-semibold mb-3 text-green-700">Calendar & Events</h3>
@@ -159,37 +133,43 @@
             </div>
         </section>
 
+
         <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Stats Management</h3>
-            <p><strong>Path:</strong> /org/stats-management</p>
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Request Official Match</h3>
+            <p><strong>Path:</strong> /org/match-request</p>
             <ul class="list-disc pl-6 mt-3">
-                <li>Centralized stats verification</li>
-                <li>Sport-specific stat views</li>
-                <li>View and approve/reject match stats</li>
-                <li>Dispute resolution</li>
+                <li>Match request formulation</li>
+                <li>Select the precise calendar date and kickoff clock settings using the Date & Time picker field.</li>
+                <li>Route the match parameters to administration workflows using the Submit Request action button.</li>
+                <li>Monitor previously initiated submissions inside the centralized Recent Requests list panel.</li>
+
+
             </ul>
             <div class="mt-6">
-                <img src="../assets/org/golf/golf_org_stats.png" alt="Organization Stats Management"
+                <img src="../assets/org/golf/golf_org_request_match.png" alt="match request"
                     class="w-full rounded-lg shadow-md border border-gray-200">
-                <p class="text-sm text-gray-500 mt-2 text-center">Organization Stats Management</p>
+                <p class="text-sm text-gray-500 mt-2 text-center">Match Request</p>
             </div>
         </section>
 
+
+
         <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Seasons</h3>
-            <p><strong>Path:</strong> /org/seasons</p>
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Tee Times</h3>
+            <p><strong>Path:</strong> /org/tee-times</p>
             <ul class="list-disc pl-6 mt-3">
-                <li>Manage seasons and programs for your organization</li>
-                <li>Create and manage seasons</li>
-                <li>Manage programs</li>
-                <li>Manage seasons and programs for your organization</li>
+                <li>Schedule and manage tee time slots</li>
+                <li>Handle player bookings and reservations</li>
+                <li>Configure course availability and intervals</li>
+                <li>Monitor daily schedules and check-ins</li>
             </ul>
             <div class="mt-6">
-                <img src="../assets/org/golf/golf_org_seasons.png" alt="Organization Seasons"
+                <img src="../assets/org/golf/golf_org_tee.png" alt="Organization Tee Times"
                     class="w-full rounded-lg shadow-md border border-gray-200">
-                <p class="text-sm text-gray-500 mt-2 text-center">Organization Seasons</p>
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Tee Times</p>
             </div>
         </section>
+
 
         <section class="mb-8">
             <h3 class="text-xl font-semibold mb-3 text-green-700">Courses and Facilities</h3>
@@ -207,6 +187,27 @@
             </div>
         </section>
 
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Member Rankings</h3>
+            <p><strong>Path:</strong> /org/league-standing</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Club Overview Statistics:Total Golfers: Total count of players registered in the club.Avg Handicap:
+                    The collective mathematical average handicap index.Total Rounds: Cumulative matches contested by all
+                    club members.Tournament Wins: Summary of all first-place trophies awarded.</li>
+                <li>Filter leaderboard history by year using the Season dropdown menu.</li>
+                <li>Display active members ranked by their current handicap index scores.</li>
+                <li>Track member performance metrics </li>
+
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_members_ranking.png" alt="Member Rankings"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Member Ranking Page</p>
+            </div>
+        </section>
+
+
         <section class="mb-8">
             <h3 class="text-xl font-semibold mb-3 text-green-700">Club Statistics</h3>
             <p><strong>Path:</strong> /org/league-stats</p>
@@ -219,6 +220,76 @@
                 <img src="../assets/org/golf/golf_org_club_statistics.png" alt="Organization Club Statistics"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Organization Club Statistics</p>
+            </div>
+        </section>
+
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Kitty Competitions</h3>
+            <p><strong>Path:</strong> /org/kitty</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Manage casual betting competitions and prize pools</li>
+                <li>Define entry requirements and payout structures</li>
+                <li>Track participant entries and financial balances</li>
+                <li>Monitor competition results and automate distributions</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_kitty.png" alt="Organization Kitty"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Kitty</p>
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Tournaments</h3>
+            <p><strong>Path:</strong> /org/tournaments</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Create Tournaments:Initialize new competitive events using the New Tournament action button.</li>
+                <li>Tournament Information Cards:Access summary breakdowns for scheduled or live golf competitions.</li>
+                <li>Track Tournament Details Including:Title: Full name of the competition event.</li>
+                <li>The tactical competitive format structure utilized</li>
+
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_tournament.png" alt="Organization tournament"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Tournaments</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Stats Management</h3>
+            <p><strong>Path:</strong> /org/stats-management</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Total count of registered players.</li>
+                <li>Spotlight panel highlighting leading goal scorers and assist providers.</li>
+                <li>Cumulative player appearances across matches.</li>
+                <li>full Squad list according to their performance</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_stats.png" alt="Organization Stats Management"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Stats Management</p>
+            </div>
+        </section>
+
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">History and Archives</h3>
+            <p><strong>Path:</strong> /team/seasons</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Initialize new team periods using the link club season.</li>
+                <li>Active Cycles Tracker</li>
+                <li>Store closed seasonal records inside the Trophy Cabinet </li>
+
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/team/team_history.png" alt="Team history"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">History and Archives Page</p>
             </div>
         </section>
 
@@ -236,7 +307,6 @@
                 <p class="text-sm text-gray-500 mt-2 text-center">Organization Communications</p>
             </div>
         </section>
-
 
         <section class="mb-8">
             <h3 class="text-xl font-semibold mb-3 text-green-700">Message Templates</h3>
@@ -268,24 +338,26 @@
             </div>
         </section>
 
+
         <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Assignments</h3>
-            <p><strong>Path:</strong> /org/assignments</p>
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Program Form</h3>
+            <p><strong>Path:</strong> /org/program-forms</p>
             <ul class="list-disc pl-6 mt-3">
-                <li>Manage volunteer tasks and assignments</li>
-                <li>Assign tasks to volunteers</li>
-                <li>Track task completion</li>
+                <li>Build customizable forms using the New form action button.</li>
+                <li>Centralized hub to view and manage all created registration forms.</li>
+
             </ul>
             <div class="mt-6">
-                <img src="../assets/org/golf/golf_org_assignments.png" alt="Organization Assignments"
+                <img src="../assets/org/golf/golf_org_program_form.png" alt="Organization Program form"
                     class="w-full rounded-lg shadow-md border border-gray-200">
-                <p class="text-sm text-gray-500 mt-2 text-center">Organization Assignments</p>
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Program Form</p>
             </div>
         </section>
 
+
         <section class="mb-8">
             <h3 class="text-xl font-semibold mb-3 text-green-700">Media & Files</h3>
-            <p><strong>Path:</strong> /org/media-files</p>
+            <p><strong>Path:</strong> /org/media</p>
             <ul class="list-disc pl-6 mt-3">
                 <li>Share photos, videos, and documents with your teams</li>
                 <li>Organize media and files</li>
@@ -297,6 +369,24 @@
                 <p class="text-sm text-gray-500 mt-2 text-center">Organization Media & Files</p>
             </div>
         </section>
+
+
+
+        <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Documents</h3>
+            <p><strong>Path:</strong> /org/compliance/documents</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Manage documents for your teams</li>
+                <li>Create and manage documents</li>
+                <li>Track document status</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_documents.png" alt="Organization Documents"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Documents</p>
+            </div>
+        </section>
+
 
         <section class="mb-8">
             <h3 class="text-xl font-semibold mb-3 text-green-700">Waivers</h3>
@@ -328,18 +418,19 @@
             </div>
         </section>
 
+
         <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Documents</h3>
-            <p><strong>Path:</strong> /org/compliance/documents</p>
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Analytics</h3>
+            <p><strong>Path:</strong> /org/analytics</p>
             <ul class="list-disc pl-6 mt-3">
-                <li>Manage documents for your teams</li>
-                <li>Create and manage documents</li>
-                <li>Track document status</li>
+                <li>Performance analytics dashboards</li>
+                <li>Participation and growth metrics</li>
+                <li>Exportable reports</li>
             </ul>
             <div class="mt-6">
-                <img src="../assets/org/golf/golf_org_documents.png" alt="Organization Documents"
+                <img src="../assets/org/golf/org_analytics.png" alt="Organization Analytics"
                     class="w-full rounded-lg shadow-md border border-gray-200">
-                <p class="text-sm text-gray-500 mt-2 text-center">Organization Documents</p>
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Analytics</p>
             </div>
         </section>
 
@@ -360,36 +451,58 @@
 
 
         <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Analytics</h3>
-            <p><strong>Path:</strong> /org/analytics</p>
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Membership</h3>
+            <p><strong>Path:</strong> /org/membership</p>
             <ul class="list-disc pl-6 mt-3">
-                <li>Performance analytics dashboards</li>
-                <li>Participation and growth metrics</li>
-                <li>Exportable reports</li>
+                <li>Manage membership types and fees</li>
+                <li>Track registration status and renewals</li>
+                <li>Export membership data for reporting</li>
             </ul>
             <div class="mt-6">
-                <img src="../assets/org/org_analytics.png" alt="Organization Analytics"
+                <img src="../assets/org/golf/golf_org_membership.png" alt="Organization Membership"
                     class="w-full rounded-lg shadow-md border border-gray-200">
-                <p class="text-sm text-gray-500 mt-2 text-center">Organization Analytics</p>
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Membership</p>
             </div>
         </section>
 
-
         <section class="mb-8">
-            <h3 class="text-xl font-semibold mb-3 text-green-700">Billing Payments</h3>
-            <p><strong>Path:</strong> /org/billing/payments</p>
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Billing & plan </h3>
+            <p><strong>Path:</strong> /org/billing</p>
             <ul class="list-disc pl-6 mt-3">
                 <li>View payment history</li>
                 <li>Manage payment methods</li>
                 <li>Retry failed payments</li>
             </ul>
             <div class="mt-6">
-                <img src="../assets/org/org_payments.png" alt="Organization Payments"
+                <img src="../assets/org/golf/org_payments.png" alt="Organization Payments"
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Organization Payments</p>
             </div>
         </section>
 
+
+
+
+
+
+
+
+
+        <!-- <section class="mb-8">
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Seasons</h3>
+            <p><strong>Path:</strong> /org/seasons</p>
+            <ul class="list-disc pl-6 mt-3">
+                <li>Manage seasons and programs for your organization</li>
+                <li>Create and manage seasons</li>
+                <li>Manage programs</li>
+                <li>Manage seasons and programs for your organization</li>
+            </ul>
+            <div class="mt-6">
+                <img src="../assets/org/golf/golf_org_seasons.png" alt="Organization Seasons"
+                    class="w-full rounded-lg shadow-md border border-gray-200">
+                <p class="text-sm text-gray-500 mt-2 text-center">Organization Seasons</p>
+            </div>
+        </section>
 
         <section class="mb-8">
             <h3 class="text-xl font-semibold mb-3 text-green-700">Billing Invoices</h3>
@@ -404,7 +517,7 @@
                     class="w-full rounded-lg shadow-md border border-gray-200">
                 <p class="text-sm text-gray-500 mt-2 text-center">Organization Invoices</p>
             </div>
-        </section>
+        </section> -->
 
     </main>
 
